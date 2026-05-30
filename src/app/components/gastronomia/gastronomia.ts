@@ -186,7 +186,7 @@ export class GastronomiaComponent {
   protected selectedCategory = 'Todos';
   protected activeDishId: string | null = null;
   
-  protected categories: string[] = ['Todos', 'Pescados', 'Bebidas y Postres', 'Aperitivos'];
+  protected categories: string[] = ['Todos', 'Pescados', 'Aperitivos', 'Bebidas y Postres', 'Otros'];
 
   protected dishes: Dish[] = [
     {
@@ -207,37 +207,55 @@ export class GastronomiaComponent {
       secretTip: 'Envuelve el pescado en hojas de plátano soasadas durante la cocción al vapor para retener sus jugos y aportar un aroma campestre inigualable.'
     },
     {
-      id: 'sudado-capaz',
-      name: 'Sudado de Capaz',
+      id: 'trucha-frita',
+      name: 'Trucha Frita del Río',
       category: 'Pescados',
-      description: 'Plato tradicional de pescado de río, cocinado a fuego lento con papas, plátano y sazonado con cebollín y cilantro de monte.',
-      image: 'assets/images/gastronomia-capaz.jpg',
+      description: 'Deliciosa trucha fresca, frita hasta obtener una piel dorada y crujiente con una carne tierna y jugosa por dentro. Servida con patacón.',
+      image: 'assets/gastronomia/Trucha frita.png',
       ingredients: [
-        '2 Pescados Capaz frescos enteros',
-        '4 Papas sabaneras peladas',
-        '1 Plátano maduro cortado en rodajas',
-        'Guiso de tomate, ajo picado, pimentón y ramitas de cilantro de pozo'
+        '1 Trucha fresca entera de la región',
+        'Harina de trigo para apanar',
+        'Sal, ajo macerado y pimienta al gusto',
+        'Aceite vegetal para freír',
+        'Acompañamiento: Limón mandarina, patacón verde y arroz con coco'
       ],
-      prepTime: '35 mins',
-      difficulty: 'Medio',
-      secretTip: 'Para lograr el espesor perfecto en el caldo, tritura un pedazo de yuca cocida en la salsa y mézclala bien antes de servir el plato caliente.'
+      prepTime: '25 mins',
+      difficulty: 'Fácil',
+      secretTip: 'Sazona la trucha con ajo molido y unas gotas de limón 15 minutos antes de freír para que absorba bien el sabor en su carne blanca.'
     },
     {
-      id: 'sancocho-pescado',
-      name: 'Sancocho de Pescado a la Leña',
-      category: 'Pescados',
-      description: 'Caldo sustancioso y humeante cocido en fogón de leña. Lleva yuca, plátano verde, plátano maduro, papa y leche de coco opcional.',
-      image: 'assets/images/gastronomia-sancocho.jpg',
+      id: 'patacon-relleno',
+      name: 'Patacón Relleno Especial',
+      category: 'Aperitivos',
+      description: 'Un patacón de plátano verde gigante y crujiente en forma de canasta, relleno de carne desmechada, pechuga de pollo, hogao criollo y queso derretido.',
+      image: 'assets/gastronomia/Patacon Relleno.jpeg',
       ingredients: [
-        '1 Cabeza grande y cola de pescado para sustancia',
-        'Filetes de bagre o bocachico',
-        'Plátano verde, papa criolla, yuca',
-        'Cilantro cimarrón, cebolla, ajo molido y comino',
-        '1 taza de leche de coco fresca (opcional)'
+        '1 Plátano verde grande (Hartón)',
+        'Carne de res desmechada y pechuga de pollo desmechada',
+        'Guiso de cebolla, tomate picado y ajo',
+        'Queso doble crema rallado para gratinar',
+        'Aceite para freír y sal al gusto'
       ],
-      prepTime: '60 mins',
-      difficulty: 'Difícil',
-      secretTip: 'Sellar las cabezas del pescado en aceite con achiote y ajo antes de agregar el agua hirviendo intensifica el sabor y le da un color dorado precioso.'
+      prepTime: '30 mins',
+      difficulty: 'Fácil',
+      secretTip: 'Fríe el plátano en trozos gruesos a fuego medio, sácalo, aplástalo usando dos tablas de madera y vuelve a freírlo a fuego alto para que quede extra crujiente.'
+    },
+    {
+      id: 'pizza-artesanal',
+      name: 'Pizza Artesanal Italiana',
+      category: 'Otros',
+      description: 'Pizza de masa delgada horneada artesanalmente con salsa casera de tomates maduros, abundante queso mozzarella fundido, albahaca y aceite de oliva.',
+      image: 'assets/gastronomia/Pizza Artesanal Italiana.jpeg',
+      ingredients: [
+        'Harina de trigo de fuerza y levadura para la masa',
+        'Salsa de tomates frescos sazonada con orégano y sal de mar',
+        'Queso mozzarella de búfala rallado',
+        'Hojas de albahaca fresca',
+        'Aceite de oliva extra virgen'
+      ],
+      prepTime: '20 mins',
+      difficulty: 'Medio',
+      secretTip: 'Para emular un horno de leña profesional, precalienta una piedra para pizza o una bandeja metálica a la máxima temperatura antes de deslizar la masa.'
     },
     {
       id: 'chontaduro',

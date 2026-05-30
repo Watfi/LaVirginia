@@ -19,6 +19,10 @@ export const routes: Routes = [
     loadComponent: () => import('./components/ubicacion/ubicacion').then(m => m.UbicacionComponent) 
   },
   { 
+    path: 'territorio', 
+    loadComponent: () => import('./components/proyecto/proyecto').then(m => m.ProyectoComponent) 
+  },
+  { 
     path: 'galeria', 
     loadComponent: () => import('./components/galeria/galeria').then(m => m.GaleriaComponent) 
   },
@@ -28,4 +32,5 @@ export const routes: Routes = [
   },
   { path: '**', redirectTo: 'inicio' }
 ];
+
 
