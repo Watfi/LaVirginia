@@ -342,11 +342,20 @@ export class ProyectoComponent implements OnInit {
     {
       id: 'hernan',
       name: 'Hernán',
-      title: 'El Arraigo y Carisma de la Ribera',
+      title: 'La Noche del Puente Mocatán',
       image: 'assets/microrelatos/hernan/hernancho.jpeg',
       isGif: false,
-      text: 'Hernán, conocido cariñosamente como "Hernancho" por sus vecinos, es otra de las figuras esenciales de la comunidad que representa la alegría y el arraigo popular en La Virginia. Habitante de los sectores ribereños, personifica al ciudadano que dinamiza el espacio público mediante la interacción diaria y el saludo fraterno. Nos comparte su mirada participante acerca del crecimiento urbano, destacando la importancia de no perder la conexión espiritual con el río Cauca y el río Risaralda, los cuales considera el verdadero corazón del municipio. A través de su carisma, fomenta en los jóvenes el respeto por la historia fluvial y la fraternidad vecinal.',
-      highlight: 'El río no es solo agua que pasa; es la historia y el latido diario que nos une como virginianos.'
+      text: 'Ocurrió una noche mientras trabajaba como guachimán en unos cultivos de maíz, justo al otro lado del puente Mocatán, donde pasa el río Risaralda. Salió un momento al río a recoger agua y, cuando iba de regreso, vio aparecer en el puente una silueta con un sombrero grandísimo. El personaje era alto como un poste; pasó exactamente frente a la entrada para Portobelo y siguió de largo hacia el ingenio. En el momento no se asustó, se le quedó mirando fijo para entender qué era eso, preguntándose: «¿Y esto qué es?». El susto de verdad le dio después, cuando ya había pasado. Por fortuna no lo agredió ni le hizo nada; simplemente se esfumó en la noche, dejándolo con la duda de si lo había mirado o no, pues él solo se dedicó a verlo pasar.',
+      highlight: 'Se esfumó en la noche, dejándome con la duda de si me había mirado o no. Solo me dediqué a verlo pasar.'
+    },
+    {
+      id: 'juanmanuel',
+      name: 'Juan Manuel Guerrero',
+      title: 'Resiliencia desde la Orilla del Cauca',
+      image: 'assets/microrelatos/Juan  manuel/Juan Manuel.jpeg',
+      isGif: false,
+      text: 'Juan Manuel Guerrero es un habitante de 37 años de La Virginia que permitió conocer un poco sobre su realidad cruda, que incluso marca la historia del municipio cerca del Río Cauca. Con honestidad, recuerda cómo su infancia fue marcada por la violencia, cuando tuvieron que ayudar a muchas familias a rescatar del río los cuerpos de sus seres queridos que bajaban flotando desde el Valle. También menciona mitos como el pez capaz de hundir botes y, más personalmente, cómo la falta de empleo en la región —principalmente por la caña y los areneros— impulsó la motivación de muchos jóvenes, incluido él, hacia bandas criminales y el famoso "Plan Pistola", referenciando personajes como Martín y Jeringa. A día de hoy Juan Manuel es una persona dedicada a la pesca regular, alejado de ese camino, inspirando con su resiliencia a trabajar a pesar del alto costo de la vida y la falta de oportunidades que tuvo para sacar adelante a su familia.',
+      highlight: 'Uno aprende a sacar la familia adelante con lo que el río da. Ese camino oscuro no era el mío, aunque casi me lleva.'
     }
   ];
 
@@ -398,7 +407,8 @@ export class ProyectoComponent implements OnInit {
       'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80', // Woman portrait for Miriam
       'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80', // Man portrait for Rolo
       'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80', // Older man portrait for Jorge
-      'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80'  // Young man portrait for Hernan
+      'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80', // Young man portrait for Hernan
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80'  // Man portrait for Juan Manuel
     ];
     event.target.src = fallbacks[index % fallbacks.length];
   }

@@ -11,13 +11,12 @@ import { CommonModule } from '@angular/common';
     <div class="animate-fade-in">
       <!-- HERO BANNER SECTION -->
       <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-slate-950 text-white py-20 px-4">
-        <!-- Background Gradient and Decorative Shapes -->
-        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-30 mix-blend-overlay" style="background-image: url('assets/images/hero-bg.jpg');"></div>
-        <div class="absolute inset-0 z-0 bg-gradient-to-tr from-emerald-950/90 via-slate-900/90 to-amber-950/70"></div>
-        
-        <!-- Animated Background Blobs -->
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+        <!-- Real Photo Background -->
+        <div class="absolute inset-0 z-0">
+          <img src="assets/Visuales/Vista Cielo Puente bernardo.jpeg" alt="Vista aérea Puente Bernardo Arango" class="w-full h-full object-cover object-center">
+        </div>
+        <!-- Overlay para legibilidad del texto -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-slate-950/40"></div>
 
         <!-- Content -->
         <div class="relative z-10 max-w-5xl mx-auto text-center">
@@ -102,7 +101,7 @@ import { CommonModule } from '@angular/common';
           <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
             <div class="relative h-56 bg-emerald-950 overflow-hidden">
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
-              <img src="assets/images/puente.jpg" alt="Puente Bernardo Arango" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1549692540-848859296570?auto=format&fit=crop&w=600&q=80'">
+              <img src="assets/Visuales/Atardecer puente bernardo.jpeg" alt="Puente Bernardo Arango al atardecer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
               <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-amber-500 text-slate-950 text-xs font-bold rounded-full uppercase tracking-wider">Arquitectura</span>
             </div>
             <div class="p-6 flex-1 flex flex-col">
@@ -138,7 +137,7 @@ import { CommonModule } from '@angular/common';
           <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
             <div class="relative h-56 bg-sky-950 overflow-hidden">
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
-              <img src="assets/images/guasimo.jpg" alt="Ecoturismo El Guásimo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80'">
+              <img src="assets/Visuales/Rio cauca atardecer.jpeg" alt="Río Cauca al atardecer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
               <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">Naturaleza</span>
             </div>
             <div class="p-6 flex-1 flex flex-col">
@@ -152,11 +151,82 @@ import { CommonModule } from '@angular/common';
             </div>
           </div>
         </div>
+
+        <!-- Segunda fila: 3 cards adicionales con imágenes reales -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <!-- Card 4 - Patrimonio Cultural -->
+          <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
+            <div class="relative h-56 bg-yellow-950 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
+              <img src="assets/Visuales/Estatua Caballero gaucho.jpeg" alt="Estatua Caballero Gaucho" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+              <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-yellow-500 text-slate-950 text-xs font-bold rounded-full uppercase tracking-wider">Patrimonio</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading">El Caballero Gaucho</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
+                Monumento símbolo de la identidad virgeniana, que rinde homenaje al espíritu libre y trabajador de su gente. Punto de encuentro y orgullo ciudadano.
+              </p>
+              <a routerLink="/historia" class="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition duration-200">
+                Conocer la historia <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5 - Fe y Tradición -->
+          <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
+            <div class="relative h-56 bg-indigo-950 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
+              <img src="assets/Visuales/Iglesia La Capilla.jpeg" alt="Iglesia La Capilla" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+              <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-indigo-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">Fe y Tradición</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading">La Capilla</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
+                Joya arquitectónica religiosa del municipio. La capilla es testigo silencioso de generaciones de fe, bautismos y celebraciones que forman el alma espiritual de La Virginia.
+              </p>
+              <a routerLink="/historia" class="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition duration-200">
+                Ver historia religiosa <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6 - Memoria Histórica -->
+          <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
+            <div class="relative h-56 bg-stone-950 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
+              <img src="assets/Visuales/Cementerio.jpeg" alt="Cementerio de La Virginia" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+              <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-stone-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">Memoria Viva</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading">Cementerio Municipal</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
+                Un espacio de historia, arte funerario y memoria colectiva. Sus tumbas guardan las historias de familias fundadoras y personajes que construyeron la identidad municipal.
+              </p>
+              <a routerLink="/historia" class="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition duration-200">
+                Explorar raíces <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BANNER FOTOGRÁFICO - Letrero La Virginia -->
+      <section class="relative h-48 md:h-64 overflow-hidden my-4">
+        <img src="assets/Visuales/Letrero La Virginia.jpeg" alt="Letrero de bienvenida La Virginia" class="w-full h-full object-cover object-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-transparent to-slate-950/70 flex items-center justify-center">
+          <p class="text-white text-2xl md:text-4xl font-extrabold tracking-widest drop-shadow-lg font-heading text-center px-4">
+            BIENVENIDO A LA VIRGINIA, RISARALDA
+          </p>
+        </div>
       </section>
 
       <!-- VIDEO PROMO SECTION -->
-      <section class="py-16 bg-slate-100 dark:bg-slate-900/40 border-y border-slate-200/50 dark:border-slate-800/40">
-        <div class="max-w-7xl mx-auto px-4">
+      <section class="py-16 relative border-y border-slate-200/50 dark:border-slate-800/40 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/Visuales/Puente fransisco.jpeg" alt="Puente Francisco" class="w-full h-full object-cover object-center opacity-15 dark:opacity-10">
+        </div>
+        <div class="absolute inset-0 z-0 bg-slate-100/90 dark:bg-slate-900/90"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-5">

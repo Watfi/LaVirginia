@@ -169,9 +169,10 @@ interface TimelineEvent {
 
           <!-- HIMNO -->
           <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/80 p-8 rounded-3xl shadow-md flex flex-col items-center w-full">
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mb-4 text-center">El Himno</h3>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mb-1 text-center">El Himno</h3>
+            <p class="text-[10px] text-slate-400 mb-4 text-center">Letra: Francisco González Lotero &nbsp;·&nbsp; Música: Rodrigo Arango</p>
 
-            <!-- Audio Player Simulator -->
+            <!-- Audio Player (MP3 real) -->
             <div class="w-full bg-slate-50 dark:bg-slate-950 p-4 rounded-2xl border border-slate-200/50 dark:border-slate-800 mb-5">
               <div class="flex items-center gap-3 mb-3">
                 <button (click)="toggleAnthem()"
@@ -181,14 +182,14 @@ interface TimelineEvent {
                 </button>
                 <div class="flex-1 min-w-0">
                   <p class="text-xs font-bold text-slate-700 dark:text-slate-300 truncate">Himno de La Virginia</p>
-                  <p class="text-[10px] text-slate-400 mt-0.5">Letra: F. González Lotero</p>
+                  <p class="text-[10px] text-slate-400 mt-0.5">F. González Lotero · R. Arango</p>
                 </div>
-                <span class="text-[10px] font-mono text-slate-400 flex-shrink-0">{{ formatTime(audioProgress) }} / 1:20</span>
+                <span class="text-[10px] font-mono text-slate-400 flex-shrink-0">{{ elapsedLabel }} / {{ durationLabel }}</span>
               </div>
 
-              <!-- Progress Bar -->
-              <div class="h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden cursor-pointer">
-                <div class="h-full bg-emerald-500 transition-all duration-300 rounded-full" [style.width.%]="audioProgress"></div>
+              <!-- Progress Bar clickable -->
+              <div class="h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden cursor-pointer" (click)="seekAudio($event)">
+                <div class="h-full bg-emerald-500 transition-all duration-100 rounded-full" [style.width.%]="audioProgress"></div>
               </div>
 
               <!-- Animated waveform -->
@@ -199,14 +200,19 @@ interface TimelineEvent {
               </div>
             </div>
 
-            <!-- Scrollable Lyrics -->
-            <div class="h-36 overflow-y-auto w-full text-center text-xs text-slate-600 dark:text-slate-400 space-y-3 pr-2 leading-relaxed">
-              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">Coro</p>
-              <p>¡Salve, salve, Virginia querida,<br>tierra fértil de amor y de paz!<br>En tu suelo se nutre la vida<br>con el canto del río audaz.</p>
-              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">I Estrofa</p>
-              <p>Confluencia de valles hermosos,<br>donde el sol besa el agua al pasar,<br>tus labriegos con brazos vigorosos<br>saben siempre la tierra labrar.</p>
-              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">II Estrofa</p>
-              <p>Cuna dulce de historia y leyenda,<br>viejo puerto de gran porvenir,<br>que en el alma del pueblo se encienda<br>el orgullo de verte surgir.</p>
+            <!-- Letra real del himno -->
+            <div class="h-52 overflow-y-auto w-full text-center text-xs text-slate-600 dark:text-slate-400 space-y-3 pr-2 leading-relaxed">
+              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">— Coro —</p>
+              <p>Dos ríos te bañan de riquezas plenos<br>prodigando savias, resinas y mieles,<br>Y tus fuertes hijos al trabajo fieles<br>te dan abundancia de bienes terrenos.</p>
+
+              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">— Estrofa I —</p>
+              <p>Tu bravo linaje, tu ancestro guerrero,<br>fundó su querencia en ubérrimo valle<br>do cimbra el arisco machete que raye<br>frontera inviolable de amor altanero.<br>Valor y coraje de inmortal acero<br>forjó tu hidalguía, ¡Que jamás desmaye!<br>Arrancó a la selva tu primera calle<br>Que Sopinga fuera tu nombre primero.</p>
+
+              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">— Estrofa II —</p>
+              <p>Perla de marfiles de un hermoso valle,<br>Eres guía y guarda de aquellos pioneros<br>Llegados de un mundo de recios hacheros<br>a escribir la historia do libertad de halle.<br>Libre ya el esclavo, sin que lo desmaye<br>Temor a la selva, se hace caballero<br>Recias hazañas, de lo duradero<br>construyendo un mundo que nadie avasalle.</p>
+
+              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">— Estrofa III —</p>
+              <p>Tu espíritu libre ya nunca te falle<br>Puerta de bonanzas y emporio cimero<br>Te ha ungido el destino con noble venero<br>Para que el futuro tu presente ensaye.<br>Enclave de honrosos caminos y calles<br>Desde donde el hombre divisa el crucero<br>De puertas abiertas a lo venidero<br>Y donde tus hijos la historia atalayen.</p>
             </div>
           </div>
 
@@ -275,44 +281,86 @@ export class HistoriaComponent implements OnDestroy {
     }
   ];
 
-  // ── Anthem player ─────────────────────────────────────────────
-  protected isPlaying   = false;
+  // ── Anthem player (HTML5 Audio) ───────────────────────────────
+  protected isPlaying     = false;
   protected audioProgress = 0;
   protected soundBars: number[] = Array(14).fill(3);
-  private   intervalId: any = null;
+  protected elapsedLabel  = '0:00';
+  protected durationLabel = '0:00';
+  protected voiceName     = '';
+
+  private audio: HTMLAudioElement | null = null;
+  private waveIntervalId: any = null;
+
+  private getAudio(): HTMLAudioElement {
+    if (!this.audio) {
+      this.audio = new Audio('assets/Himno Municipio La Virginia, Risaralda  Portafolio realización video - aticoagencia.mp3');
+
+      this.audio.addEventListener('timeupdate', () => {
+        if (!this.audio) return;
+        const pct = this.audio.duration ? (this.audio.currentTime / this.audio.duration) * 100 : 0;
+        this.audioProgress = pct;
+        this.elapsedLabel  = this.formatSec(this.audio.currentTime);
+      });
+
+      this.audio.addEventListener('loadedmetadata', () => {
+        if (!this.audio) return;
+        this.durationLabel = this.formatSec(this.audio.duration);
+      });
+
+      this.audio.addEventListener('ended', () => this.stopPlayer());
+    }
+    return this.audio;
+  }
 
   protected toggleAnthem(): void {
-    this.isPlaying = !this.isPlaying;
+    const a = this.getAudio();
     if (this.isPlaying) {
-      this.intervalId = setInterval(() => {
-        if (this.audioProgress < 100) {
-          this.audioProgress += 1.25;
-          this.soundBars = this.soundBars.map(() => Math.floor(Math.random() * 20) + 4);
-        } else {
-          this.stopPlayer();
-        }
-      }, 1000);
+      a.pause();
+      this.isPlaying = false;
+      clearInterval(this.waveIntervalId);
+      this.soundBars = Array(14).fill(3);
     } else {
-      clearInterval(this.intervalId);
+      a.play().catch(() => {});
+      this.isPlaying = true;
+      this.startWave();
     }
   }
 
-  private stopPlayer(): void {
-    this.isPlaying      = false;
-    this.audioProgress  = 0;
-    this.soundBars      = Array(14).fill(3);
-    clearInterval(this.intervalId);
+  protected seekAudio(event: MouseEvent): void {
+    const a = this.getAudio();
+    if (!a.duration) return;
+    const rect = (event.currentTarget as HTMLElement).getBoundingClientRect();
+    const pct  = (event.clientX - rect.left) / rect.width;
+    a.currentTime = pct * a.duration;
   }
 
-  protected formatTime(progress: number): string {
-    const total   = 80;
-    const current = Math.floor((progress / 100) * total);
-    const m = Math.floor(current / 60);
-    const s = current % 60;
-    return `${m}:${s < 10 ? '0' : ''}${s}`;
+  private startWave(): void {
+    clearInterval(this.waveIntervalId);
+    this.waveIntervalId = setInterval(() => {
+      this.soundBars = this.soundBars.map(() => Math.floor(Math.random() * 20) + 4);
+    }, 200);
+  }
+
+  private stopPlayer(): void {
+    if (this.audio) {
+      this.audio.pause();
+      this.audio.currentTime = 0;
+    }
+    this.isPlaying     = false;
+    this.audioProgress = 0;
+    this.elapsedLabel  = '0:00';
+    this.soundBars     = Array(14).fill(3);
+    clearInterval(this.waveIntervalId);
+  }
+
+  private formatSec(sec: number): string {
+    const s = Math.floor(sec);
+    return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
   }
 
   ngOnDestroy(): void {
-    clearInterval(this.intervalId);
+    this.stopPlayer();
+    this.audio = null;
   }
 }

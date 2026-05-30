@@ -157,51 +157,67 @@ export class GaleriaComponent {
   protected images: GalleryImage[] = [
     {
       id: 1,
-      title: 'Puente Bernardo Arango al Atardecer',
+      title: 'Vista Aérea Puente Bernardo Arango',
       category: 'Arquitectura',
-      description: 'El imponente puente colgante recortado contra un vibrante cielo dorado y rojizo en las horas de la tarde.',
-      url: 'assets/images/galeria-puente-1.jpg',
-      fallbackUrl: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80'
+      description: 'Perspectiva cenital del icónico puente colgante de 1928, patrimonio histórico que cruza el río Cauca conectando La Virginia con Caimalito.',
+      url: 'assets/Visuales/Vista Cielo Puente bernardo.jpeg',
+      fallbackUrl: ''
     },
     {
       id: 2,
-      title: 'Reserva Natural El Guásimo',
-      category: 'Naturaleza',
-      description: 'El denso y exótico follaje del bosque seco tropical, un remanso de tranquilidad protegido en Risaralda.',
-      url: 'assets/images/galeria-guasimo-1.jpg',
-      fallbackUrl: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80'
+      title: 'Puente Bernardo Arango al Atardecer',
+      category: 'Arquitectura',
+      description: 'El puente colgante bañado por la luz dorada del atardecer risaraldense, reflejo del alma fluvial de La Virginia.',
+      url: 'assets/Visuales/Atardecer puente bernardo.jpeg',
+      fallbackUrl: ''
     },
     {
       id: 3,
-      title: 'El Río Cauca y sus Pescadores',
-      category: 'Río',
-      description: 'Canoas tradicionales navegando las mansas y caudalosas aguas del río Cauca en plena jornada de pesca artesanal.',
-      url: 'assets/images/galeria-rio-1.jpg',
-      fallbackUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80'
+      title: 'Puente Francisco sobre el Río',
+      category: 'Arquitectura',
+      description: 'Estructura vial que conecta el municipio con el departamento, testigo del flujo humano y comercial de la región.',
+      url: 'assets/Visuales/Puente fransisco.jpeg',
+      fallbackUrl: ''
     },
     {
       id: 4,
-      title: 'Parque de las Iguanas',
-      category: 'Naturaleza',
-      description: 'Una iguana verde tomando los rayos del cálido sol de la tarde en una de las ramas altas de la plaza central.',
-      url: 'assets/images/galeria-iguana-1.jpg',
-      fallbackUrl: 'https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=800&q=80'
+      title: 'Río Cauca al Atardecer',
+      category: 'Río',
+      description: 'Las aguas del Cauca teñidas de naranja y oro en las horas del ocaso. El pulso vital que le da vida al Puerto Dulce.',
+      url: 'assets/Visuales/Rio cauca atardecer.jpeg',
+      fallbackUrl: ''
     },
     {
       id: 5,
-      title: 'Paso de la Barca y Embarcaciones',
-      category: 'Río',
-      description: 'Embarcadero sobre el río Cauca donde los habitantes se transportan diariamente hacia Caimalito en tradicionales lanchas.',
-      url: 'assets/images/galeria-embarcadero.jpg',
-      fallbackUrl: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=800&q=80'
+      title: 'El Caballero Gaucho',
+      category: 'Cultura',
+      description: 'Monumento símbolo de la identidad virgeniana que rinde homenaje al espíritu libre y trabajador de sus gentes.',
+      url: 'assets/Visuales/Estatua Caballero gaucho.jpeg',
+      fallbackUrl: ''
     },
     {
       id: 6,
-      title: 'Desfile del Sol, el Río y la Arena',
+      title: 'Iglesia La Capilla',
       category: 'Cultura',
-      description: 'Celebración festiva de las fiestas aniversarias, llenando las calles de bailes típicos, comparsas y color local.',
-      url: 'assets/images/galeria-desfile.jpg',
-      fallbackUrl: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80'
+      description: 'Joya arquitectónica religiosa del municipio, testigo de generaciones de fe y celebraciones que forman el alma espiritual de La Virginia.',
+      url: 'assets/Visuales/Iglesia La Capilla.jpeg',
+      fallbackUrl: ''
+    },
+    {
+      id: 7,
+      title: 'Cementerio Municipal',
+      category: 'Cultura',
+      description: 'Espacio de historia, arte funerario y memoria colectiva donde descansan las familias fundadoras del municipio.',
+      url: 'assets/Visuales/Cementerio.jpeg',
+      fallbackUrl: ''
+    },
+    {
+      id: 8,
+      title: 'Letrero Bienvenida La Virginia',
+      category: 'Cultura',
+      description: 'El letrero de bienvenida, primer saludo que recibe cada visitante al ingresar al Puerto Dulce de Colombia.',
+      url: 'assets/Visuales/Letrero La Virginia.jpeg',
+      fallbackUrl: ''
     }
   ];
 

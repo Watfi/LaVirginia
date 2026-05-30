@@ -180,7 +180,7 @@ interface PointOfInterest {
       <!-- GOOGLE MAPS EMBED SECTION -->
       <section class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 md:p-8 rounded-3xl shadow-md">
         <h2 class="text-2xl font-bold text-slate-950 dark:text-white mb-6 font-heading text-center">
-          Ubicación Georeferenciada (Google Maps)
+          Ubicación Georeferenciada
         </h2>
         
         <!-- Google Map Iframe Container -->
