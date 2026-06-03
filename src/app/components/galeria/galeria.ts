@@ -18,14 +18,14 @@ interface GalleryImage {
     <div class="animate-fade-in py-12 px-4 max-w-6xl mx-auto">
       <!-- HEADER -->
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-bold rounded-full uppercase tracking-wider">
+        <span class="px-3 py-1 bg-amber-500/10 text-amber-600  text-xs font-bold rounded-full uppercase tracking-wider">
           Registro Visual
         </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-950 dark:text-white mt-4 font-heading">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-950  mt-4 font-heading">
           Galería Fotográfica
         </h1>
         <div class="w-20 h-1 bg-gradient-to-r from-amber-500 to-emerald-500 mx-auto mt-4 rounded-full"></div>
-        <p class="text-slate-600 dark:text-slate-400 mt-5 leading-relaxed">
+        <p class="text-slate-600  mt-5 leading-relaxed">
           Un recorrido en imágenes por los rincones del Puerto Dulce. Admira el Puente Bernardo Arango, los ríos Cauca y Risaralda, y la majestuosidad verde de sus paisajes.
         </p>
       </div>
@@ -37,7 +37,7 @@ interface GalleryImage {
                 class="px-5 py-2 rounded-full text-xs md:text-sm font-bold transition duration-300 border focus:outline-none"
                 [ngClass]="selectedCategory === cat 
                   ? 'bg-amber-500 border-amber-500 text-slate-950 shadow-md' 
-                  : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'">
+                  : 'bg-white  border-slate-200  text-slate-600  hover:bg-slate-50 :bg-slate-800'">
           {{ cat }}
         </button>
       </div>
@@ -46,13 +46,13 @@ interface GalleryImage {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div *ngFor="let img of filteredImages" 
              (click)="openLightbox(img.id)"
-             class="group bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-850 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
+             class="group bg-white  border border-slate-100  rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer">
           
           <!-- Image Container -->
           <div class="relative h-64 bg-slate-950 overflow-hidden">
             <!-- Overlay and zoom on hover -->
             <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center">
-              <span class="px-4 py-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm text-xs font-bold text-slate-850 dark:text-white rounded-xl shadow-md border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition duration-300">
+              <span class="px-4 py-2 bg-white/90  backdrop-blur-sm text-xs font-bold text-slate-850  rounded-xl shadow-md border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition duration-300">
                 🔍 Ampliar Imagen
               </span>
             </div>
@@ -65,13 +65,13 @@ interface GalleryImage {
 
           <!-- Description -->
           <div class="p-5">
-            <span class="text-[9px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider">
+            <span class="text-[9px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600  font-bold uppercase tracking-wider">
               {{ img.category }}
             </span>
-            <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading mt-2 mb-1">
+            <h3 class="text-base font-bold text-slate-900  font-heading mt-2 mb-1">
               {{ img.title }}
             </h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+            <p class="text-xs text-slate-500  leading-relaxed line-clamp-2">
               {{ img.description }}
             </p>
           </div>

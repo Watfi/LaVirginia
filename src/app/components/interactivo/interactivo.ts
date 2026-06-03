@@ -17,20 +17,20 @@ interface Question {
     <div class="animate-fade-in py-12 px-4 max-w-4xl mx-auto">
       <!-- HEADER -->
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-bold rounded-full uppercase tracking-wider">
+        <span class="px-3 py-1 bg-amber-500/10 text-amber-600  text-xs font-bold rounded-full uppercase tracking-wider">
           Módulo Interactivo
         </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-950 dark:text-white mt-4 font-heading">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-950  mt-4 font-heading">
           Trivia: ¿Cuánto sabes del Puerto Dulce?
         </h1>
         <div class="w-20 h-1 bg-gradient-to-r from-amber-500 to-emerald-500 mx-auto mt-4 rounded-full"></div>
-        <p class="text-slate-600 dark:text-slate-400 mt-4 text-sm md:text-base leading-relaxed">
+        <p class="text-slate-600  mt-4 text-sm md:text-base leading-relaxed">
           Ponte a prueba respondiendo estas 5 preguntas sobre la historia, geografía, cultura y gastronomía de La Virginia, Risaralda. ¡Obtén tu certificado oficial de explorador al finalizar!
         </p>
       </div>
 
       <!-- MAIN TRIVIA CARD CONTAINER -->
-      <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl p-6 md:p-10 shadow-xl relative overflow-hidden">
+      <div class="bg-white  border border-slate-100  rounded-3xl p-6 md:p-10 shadow-xl relative overflow-hidden">
         
         <!-- Background accents -->
         <div class="absolute top-0 right-0 -mt-16 -mr-16 w-36 h-36 bg-amber-500/5 rounded-full blur-2xl"></div>
@@ -44,8 +44,8 @@ interface Question {
               🎓
             </div>
             <div class="space-y-2">
-              <h2 class="text-2xl font-bold text-slate-900 dark:text-white font-heading">¿Listo para el desafío?</h2>
-              <p class="text-slate-500 dark:text-slate-400 text-sm max-w-md mx-auto">
+              <h2 class="text-2xl font-bold text-slate-900  font-heading">¿Listo para el desafío?</h2>
+              <p class="text-slate-500  text-sm max-w-md mx-auto">
                 No hay tiempo límite. Analiza con calma cada pregunta. Si aciertas todas, serás proclamado Historiador Ilustre de La Virginia.
               </p>
             </div>
@@ -61,9 +61,9 @@ interface Question {
             <div class="space-y-2">
               <div class="flex justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
                 <span>Pregunta {{ currentQuestionIndex + 1 }} de {{ questions.length }}</span>
-                <span class="text-emerald-650 dark:text-emerald-400">Puntaje: {{ score }}</span>
+                <span class="text-emerald-650 ">Puntaje: {{ score }}</span>
               </div>
-              <div class="h-2 bg-slate-100 dark:bg-slate-950 rounded-full overflow-hidden border border-slate-200/30 dark:border-slate-800/20">
+              <div class="h-2 bg-slate-100  rounded-full overflow-hidden border border-slate-200/30 ">
                 <div class="h-full bg-gradient-to-r from-emerald-500 to-green-400 transition-all duration-300" 
                      [style.width.%]="progressPercent"></div>
               </div>
@@ -72,7 +72,7 @@ interface Question {
             <!-- Question Text -->
             <div class="space-y-1">
               <span class="text-xs font-semibold text-amber-500 uppercase tracking-widest">Pregunta del Municipio</span>
-              <h3 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white font-heading leading-snug">
+              <h3 class="text-xl md:text-2xl font-bold text-slate-900  font-heading leading-snug">
                 {{ currentQuestion.text }}
               </h3>
             </div>
@@ -94,7 +94,7 @@ interface Question {
             <!-- Feedback / Explanation Section -->
             <div *ngIf="hasAnswered" 
                  class="p-5 rounded-2xl border animate-fade-in-quick flex gap-3 items-start"
-                 [ngClass]="isAnswerCorrect ? 'bg-green-50/50 dark:bg-green-950/20 border-green-200/50 dark:border-green-900/50 text-green-900 dark:text-green-300' : 'bg-red-50/50 dark:bg-red-950/20 border-red-200/50 dark:border-red-900/50 text-red-900 dark:text-red-300'">
+                 [ngClass]="isAnswerCorrect ? 'bg-green-50/50  border-green-200/50  text-green-900 ' : 'bg-red-50/50  border-red-200/50  text-red-900 '">
               <span class="text-2xl">{{ isAnswerCorrect ? '🎉' : '💡' }}</span>
               <div class="space-y-1">
                 <h4 class="font-bold text-sm">{{ isAnswerCorrect ? '¡Correcto!' : 'Respuesta Incorrecta' }}</h4>
@@ -103,10 +103,10 @@ interface Question {
             </div>
 
             <!-- Action Button -->
-            <div class="flex justify-end pt-4 border-t border-slate-100 dark:border-slate-800/80">
+            <div class="flex justify-end pt-4 border-t border-slate-100 ">
               <button *ngIf="hasAnswered"
                       (click)="nextQuestion()" 
-                      class="px-6 py-3 bg-slate-900 hover:bg-slate-850 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-950 font-bold rounded-xl transition duration-200 shadow-md">
+                      class="px-6 py-3 bg-slate-900 hover:bg-slate-850  :bg-slate-100 text-white  font-bold rounded-xl transition duration-200 shadow-md">
                 {{ isLastQuestion ? 'Ver Resultados' : 'Siguiente Pregunta' }}
               </button>
             </div>
@@ -116,18 +116,18 @@ interface Question {
           <div *ngIf="gameState === 'results'" class="space-y-8 animate-fade-in">
             <div class="text-center py-4 space-y-3">
               <span class="text-4xl">🏆</span>
-              <h2 class="text-2xl font-bold text-slate-900 dark:text-white font-heading">¡Trivia Finalizada!</h2>
-              <p class="text-slate-500 dark:text-slate-400 text-sm max-w-md mx-auto">
-                Tu puntuación fue de <strong class="text-slate-900 dark:text-white">{{ score }} aciertos</strong> de {{ questions.length }} posibles. Obtuviste el título de:
+              <h2 class="text-2xl font-bold text-slate-900  font-heading">¡Trivia Finalizada!</h2>
+              <p class="text-slate-500  text-sm max-w-md mx-auto">
+                Tu puntuación fue de <strong class="text-slate-900 ">{{ score }} aciertos</strong> de {{ questions.length }} posibles. Obtuviste el título de:
               </p>
-              <div class="inline-block px-4 py-1.5 rounded-full text-sm font-extrabold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 uppercase tracking-wide">
+              <div class="inline-block px-4 py-1.5 rounded-full text-sm font-extrabold bg-amber-500/10 text-amber-600  border border-amber-500/20 uppercase tracking-wide">
                 {{ getHonorTitle() }}
               </div>
             </div>
 
             <!-- Name input for Certificate -->
-            <div class="max-w-md mx-auto bg-slate-50 dark:bg-slate-950 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-850 space-y-4">
-              <label for="explorer-name" class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+            <div class="max-w-md mx-auto bg-slate-50  p-6 rounded-2xl border border-slate-200/50  space-y-4">
+              <label for="explorer-name" class="block text-xs font-bold uppercase tracking-wider text-slate-500 ">
                 Escribe tu nombre para el certificado:
               </label>
               <div class="flex gap-2">
@@ -135,7 +135,7 @@ interface Question {
                        type="text" 
                        [(ngModel)]="explorerName" 
                        placeholder="Ej. Juan Pérez" 
-                       class="flex-1 px-4 py-2.5 rounded-xl border border-slate-350 dark:border-slate-800 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none dark:text-white" />
+                       class="flex-1 px-4 py-2.5 rounded-xl border border-slate-350  bg-white  text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none " />
               </div>
             </div>
 
@@ -199,7 +199,7 @@ interface Question {
                 🖨️ Imprimir / Guardar en PDF
               </button>
               <button (click)="restartTrivia()" 
-                      class="px-6 py-3 bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-semibold rounded-xl transition duration-200">
+                      class="px-6 py-3 bg-slate-200 hover:bg-slate-300  :bg-slate-700 text-slate-900  font-semibold rounded-xl transition duration-200">
                 🔄 Reintentar Trivia
               </button>
             </div>
@@ -346,21 +346,21 @@ export class InteractivoComponent {
 
   protected getOptionClass(index: number): string {
     if (!this.hasAnswered) {
-      return 'bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-850 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200';
+      return 'bg-white  hover:bg-slate-50 :bg-slate-850 border-slate-200  text-slate-800 ';
     }
     
     // Correct Answer
     if (index === this.currentQuestion.correctAnswerIndex) {
-      return 'bg-green-100/70 border-green-500 text-green-950 dark:bg-green-950/40 dark:text-green-300';
+      return 'bg-green-100/70 border-green-500 text-green-950  ';
     }
     
     // User selected this and it was WRONG
     if (this.selectedOptionIndex === index && index !== this.currentQuestion.correctAnswerIndex) {
-      return 'bg-red-100/70 border-red-500 text-red-950 dark:bg-red-950/40 dark:text-red-300';
+      return 'bg-red-100/70 border-red-500 text-red-950  ';
     }
     
     // Unselected wrong options
-    return 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-350 dark:text-slate-650 opacity-60';
+    return 'bg-white  border-slate-200  text-slate-350  opacity-60';
   }
 
   protected nextQuestion(): void {

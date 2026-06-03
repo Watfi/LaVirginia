@@ -28,14 +28,14 @@ interface Soundscape {
       
       <!-- HERO ACADÉMICO -->
       <section class="text-center max-w-4xl mx-auto mb-20">
-        <span class="px-3 py-1.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold rounded-full uppercase tracking-wider">
+        <span class="px-3 py-1.5 bg-emerald-500/10 text-emerald-600  text-xs font-bold rounded-full uppercase tracking-wider">
           Trabajo de Grado / Proyecto de Investigación
         </span>
-        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-950 dark:text-white mt-5 font-heading tracking-tight leading-tight">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-950  mt-5 font-heading tracking-tight leading-tight">
           Territorio Simbólico y Deriva Urbana
         </h1>
         <div class="w-24 h-1.5 bg-gradient-to-r from-emerald-500 via-amber-500 to-blue-500 mx-auto mt-6 rounded-full"></div>
-        <p class="text-slate-650 dark:text-slate-400 mt-6 text-sm md:text-lg leading-relaxed">
+        <p class="text-slate-650  mt-6 text-sm md:text-lg leading-relaxed">
           "El devenir de la ciudad permite establecer simbólicamente la relación con la misma; la idea de lo urbano va más allá de lo físico y trasciende a las relaciones que se gestan entre los humanos que circundan, accionan y movilizan el espacio."
         </p>
         <p class="text-xs text-slate-400 mt-3 italic">
@@ -44,23 +44,23 @@ interface Soundscape {
       </section>
 
       <!-- TIMELAPSE / HYPERLAPSE SECTION -->
-      <section class="mb-24 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 md:p-10 rounded-3xl shadow-xl">
+      <section class="mb-24 bg-white  border border-slate-100  p-6 md:p-10 rounded-3xl shadow-xl">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
           <div class="lg:col-span-5">
-            <span class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider block mb-2">Producto Hipermedial</span>
-            <h2 class="text-2xl md:text-3.5xl font-extrabold text-slate-900 dark:text-white font-heading leading-tight mb-4">
+            <span class="text-xs font-bold text-blue-600  uppercase tracking-wider block mb-2">Producto Hipermedial</span>
+            <h2 class="text-2xl md:text-3.5xl font-extrabold text-slate-900  font-heading leading-tight mb-4">
               Time Lapse &amp; Hyperlapse Urbano
             </h2>
-            <p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm leading-relaxed mb-4">
+            <p class="text-slate-600  text-xs md:text-sm leading-relaxed mb-4">
               A través de la técnica de cámara rápida (hyperlapse), este fragmento visual registra el pulso dinámico de los transeúntes, la confluencia vehicular y el movimiento solar sobre la arquitectura de La Virginia.
             </p>
-            <p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm leading-relaxed">
+            <p class="text-slate-600  text-xs md:text-sm leading-relaxed">
               Es un testimonio físico del fluir del tiempo en el espacio público, donde la aceleración de las imágenes exalta la interacción constante entre las personas y las calles.
             </p>
           </div>
           
           <div class="lg:col-span-7">
-            <div class="bg-slate-950 p-2.5 rounded-2xl shadow-inner border border-slate-200/50 dark:border-slate-850">
+            <div class="bg-slate-950 p-2.5 rounded-2xl shadow-inner border border-slate-200/50 ">
               <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
                 <video src="hyperlapse.mp4" controls loop muted autoplay playsinline
                        class="w-full h-full object-cover">
@@ -78,11 +78,11 @@ interface Soundscape {
       <!-- MICRÓRELATOS (TWO-COLUMN ALTERNATING GRID) -->
       <section class="mb-24">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <h2 class="text-3xl font-extrabold text-slate-950 dark:text-white font-heading">
+          <h2 class="text-3xl font-extrabold text-slate-950  font-heading">
             Microrrelatos y Voces del Territorio
           </h2>
           <div class="w-16 h-1 bg-gradient-to-r from-amber-500 to-emerald-500 mx-auto mt-3 rounded-full"></div>
-          <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 mt-3">
+          <p class="text-xs md:text-sm text-slate-500  mt-3">
             Cuatro relatos cortos que indagan en las memorias, vivencias cotidianas y la percepción de seguridad del municipio.
           </p>
         </div>
@@ -90,11 +90,11 @@ interface Soundscape {
         <div class="space-y-16">
           <!-- Iterate Microrelatos -->
           <div *ngFor="let relato of relatos; let i = index" 
-               class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center border-b border-slate-100 dark:border-slate-850/60 pb-12 last:border-0 last:pb-0">
+               class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center border-b border-slate-100  pb-12 last:border-0 last:pb-0">
             
             <!-- Column A: Visual (Image / Gif) -->
             <div class="lg:col-span-5" [ngClass]="{'lg:order-2': i % 2 !== 0}">
-              <div class="relative bg-white dark:bg-slate-900 p-2.5 rounded-3xl shadow-lg border border-slate-150/40 dark:border-slate-800/60 group overflow-hidden">
+              <div class="relative bg-white  p-2.5 rounded-3xl shadow-lg border border-slate-150/40  group overflow-hidden">
                 <div class="relative h-72 md:h-96 rounded-2xl overflow-hidden bg-slate-950 shadow-inner">
                   <img [src]="relato.image" [alt]="relato.name"
                        class="w-full h-full object-cover opacity-95 group-hover:scale-101.5 transition duration-500"
@@ -110,22 +110,22 @@ interface Soundscape {
             <!-- Column B: Narrative Text -->
             <div class="lg:col-span-7" [ngClass]="{'lg:order-1': i % 2 !== 0}">
               <div class="space-y-4">
-                <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">
+                <span class="text-xs font-bold text-emerald-600  uppercase tracking-widest block">
                   Microrrelato #{{ i + 1 }}
                 </span>
-                <h3 class="text-2xl md:text-3.5xl font-extrabold text-slate-900 dark:text-white font-heading">
+                <h3 class="text-2xl md:text-3.5xl font-extrabold text-slate-900  font-heading">
                   {{ relato.title }}
                 </h3>
-                <h4 class="text-sm font-bold text-slate-500 dark:text-slate-400 italic">
+                <h4 class="text-sm font-bold text-slate-500  italic">
                   Personaje: {{ relato.name }}
                 </h4>
                 
-                <p class="text-slate-650 dark:text-slate-350 text-sm md:text-base leading-relaxed text-justify">
+                <p class="text-slate-650  text-sm md:text-base leading-relaxed text-justify">
                   {{ relato.text }}
                 </p>
 
-                <div class="p-4 bg-amber-500/5 dark:bg-amber-500/10 border-l-4 border-amber-500 rounded-r-xl">
-                  <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 italic font-semibold">
+                <div class="p-4 bg-amber-500/5  border-l-4 border-amber-500 rounded-r-xl">
+                  <p class="text-xs md:text-sm text-slate-700  italic font-semibold">
                     "{{ relato.highlight }}"
                   </p>
                 </div>
@@ -140,36 +140,36 @@ interface Soundscape {
       <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24">
         
         <!-- Entrevistas -->
-        <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 md:p-8 rounded-3xl shadow-md flex flex-col justify-between">
+        <div class="bg-white  border border-slate-100  p-6 md:p-8 rounded-3xl shadow-md flex flex-col justify-between">
           <div>
-            <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block mb-2">Observación Participante</span>
-            <h3 class="text-xl md:text-2.5xl font-extrabold text-slate-900 dark:text-white font-heading mb-4">
+            <span class="text-[10px] font-bold text-emerald-600  uppercase tracking-widest block mb-2">Observación Participante</span>
+            <h3 class="text-xl md:text-2.5xl font-extrabold text-slate-900  font-heading mb-4">
               Entrevistas Hipermediales
             </h3>
-            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+            <p class="text-xs md:text-sm text-slate-600  leading-relaxed mb-6">
               Diálogos a profundidad grabados en el territorio para comprender la transición física de las trochas a lo urbano y las dinámicas cotidianas del comercio informal y la convivencia vecinal.
             </p>
 
             <div class="space-y-4">
               <!-- Interview card 1 -->
-              <div class="p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-150 dark:border-slate-850 flex gap-4 items-center">
+              <div class="p-4 bg-slate-50  rounded-2xl border border-slate-150  flex gap-4 items-center">
                 <button class="w-12 h-12 flex-shrink-0 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md hover:bg-emerald-700 transition focus:outline-none">
                   ▶
                 </button>
                 <div class="flex-1 min-w-0">
-                  <h4 class="text-xs md:text-sm font-bold text-slate-900 dark:text-white truncate">Entrevista 1: Doña Miriam de San Cayetano</h4>
+                  <h4 class="text-xs md:text-sm font-bold text-slate-900  truncate">Entrevista 1: Doña Miriam de San Cayetano</h4>
                   <p class="text-[10px] text-slate-450 mt-0.5">Tema: Fundación, mitos de río y Caballero Gaucho (Audio MP3)</p>
                 </div>
                 <span class="text-xs text-slate-400 font-semibold">12:34</span>
               </div>
 
               <!-- Interview card 2 -->
-              <div class="p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-150 dark:border-slate-850 flex gap-4 items-center">
+              <div class="p-4 bg-slate-50  rounded-2xl border border-slate-150  flex gap-4 items-center">
                 <button class="w-12 h-12 flex-shrink-0 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md hover:bg-emerald-700 transition focus:outline-none">
                   ▶
                 </button>
                 <div class="flex-1 min-w-0">
-                  <h4 class="text-xs md:text-sm font-bold text-slate-900 dark:text-white truncate">Entrevista 2: Testimonio de "El Rolo"</h4>
+                  <h4 class="text-xs md:text-sm font-bold text-slate-900  truncate">Entrevista 2: Testimonio de "El Rolo"</h4>
                   <p class="text-[10px] text-slate-450 mt-0.5">Tema: Seguridad barrial y civismo vial (Video Audiovisual)</p>
                 </div>
                 <span class="text-xs text-slate-400 font-semibold">08:15</span>
@@ -177,19 +177,19 @@ interface Soundscape {
             </div>
           </div>
 
-          <div class="mt-6 border-t border-slate-100 dark:border-slate-850/60 pt-4 text-center">
+          <div class="mt-6 border-t border-slate-100  pt-4 text-center">
             <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Mínimo 2 Registros Requeridos</span>
           </div>
         </div>
 
         <!-- Ambiente Sonoro -->
-        <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 md:p-8 rounded-3xl shadow-md flex flex-col justify-between">
+        <div class="bg-white  border border-slate-100  p-6 md:p-8 rounded-3xl shadow-md flex flex-col justify-between">
           <div>
-            <span class="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block mb-2">Paisaje Acústico</span>
-            <h3 class="text-xl md:text-2.5xl font-extrabold text-slate-900 dark:text-white font-heading mb-4">
+            <span class="text-[10px] font-bold text-blue-600  uppercase tracking-widest block mb-2">Paisaje Acústico</span>
+            <h3 class="text-xl md:text-2.5xl font-extrabold text-slate-900  font-heading mb-4">
               Ambientes Sonoros del Municipio
             </h3>
-            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+            <p class="text-xs md:text-sm text-slate-600  leading-relaxed mb-6">
               Capturas biaurales de los sonidos característicos de La Virginia. Escucha el susurro de la confluencia de los ríos, el bullicio de los motores de canoas y la plaza del mercado.
             </p>
 
@@ -236,39 +236,39 @@ interface Soundscape {
       <!-- CARTOGRAFÍA, PERSONAJES, ESPACIOS & OBJETOS -->
       <section class="mb-24">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <h2 class="text-3xl font-extrabold text-slate-950 dark:text-white font-heading">
+          <h2 class="text-3xl font-extrabold text-slate-950  font-heading">
             Dimensión Simbólica del Espacio Urbano
           </h2>
           <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto mt-3 rounded-full"></div>
-          <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 mt-3">
+          <p class="text-xs md:text-sm text-slate-500  mt-3">
             Análisis cualitativo del territorio a través de sus elementos representativos.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Cartografía Simbólica -->
-          <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 rounded-3xl shadow-sm space-y-4 hover:shadow-md transition">
+          <div class="bg-white  border border-slate-100  p-6 rounded-3xl shadow-sm space-y-4 hover:shadow-md transition">
             <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl">🗺️</div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">Cartografía Simbólica</h3>
-            <p class="text-xs md:text-sm text-slate-650 dark:text-slate-400 leading-relaxed">
+            <h3 class="text-lg font-bold text-slate-900  font-heading">Cartografía Simbólica</h3>
+            <p class="text-xs md:text-sm text-slate-650  leading-relaxed">
               Mapeo de las percepciones de los habitantes sobre zonas de riesgo, centralidades comerciales (puesto de Jorge) y trayectos peatonales seguros. Representa el espacio vivido por encima del espacio físico.
             </p>
           </div>
 
           <!-- Personajes Característicos -->
-          <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 rounded-3xl shadow-sm space-y-4 hover:shadow-md transition">
+          <div class="bg-white  border border-slate-100  p-6 rounded-3xl shadow-sm space-y-4 hover:shadow-md transition">
             <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl">🧑🏽‍🤝‍🧑🏽</div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">Personajes Característicos</h3>
-            <p class="text-xs md:text-sm text-slate-650 dark:text-slate-400 leading-relaxed">
+            <h3 class="text-lg font-bold text-slate-900  font-heading">Personajes Característicos</h3>
+            <p class="text-xs md:text-sm text-slate-650  leading-relaxed">
               El tejido social se construye a partir de voces cotidianas como doña Miriam, el rolo y don Jorge. Ellos encarnan la memoria viva, la resiliencia laboral y la construcción comunitaria del municipio.
             </p>
           </div>
 
           <!-- Objetos y Espacios -->
-          <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 rounded-3xl shadow-sm space-y-4 hover:shadow-md transition">
+          <div class="bg-white  border border-slate-100  p-6 rounded-3xl shadow-sm space-y-4 hover:shadow-md transition">
             <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-xl">🛶</div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading">Objetos y Espacios Representativos</h3>
-            <p class="text-xs md:text-sm text-slate-650 dark:text-slate-400 leading-relaxed">
+            <h3 class="text-lg font-bold text-slate-900  font-heading">Objetos y Espacios Representativos</h3>
+            <p class="text-xs md:text-sm text-slate-650  leading-relaxed">
               La canoa, las salsas artesanales, la estatua del Caballero Gaucho y las casas tradicionales de bareque actúan como anclas físicas de la memoria colectiva del Puerto Dulce.
             </p>
           </div>
@@ -276,14 +276,14 @@ interface Soundscape {
       </section>
 
       <!-- MINI DOCUMENTAL SECTION -->
-      <section class="max-w-4xl mx-auto text-center border-t border-slate-150 dark:border-slate-850/60 pt-16">
+      <section class="max-w-4xl mx-auto text-center border-t border-slate-150  pt-16">
         <span class="text-xs font-bold text-amber-500 uppercase tracking-widest block mb-2">Producto Final Consolidado</span>
-        <h2 class="text-3xl font-extrabold text-slate-950 dark:text-white font-heading mb-6">Mini Documental</h2>
-        <p class="text-slate-650 dark:text-slate-400 text-sm leading-relaxed mb-8 max-w-2xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-slate-950  font-heading mb-6">Mini Documental</h2>
+        <p class="text-slate-650  text-sm leading-relaxed mb-8 max-w-2xl mx-auto">
           El consolidado hipermedial del proyecto de campo, estructurado en un video etnográfico que recopila las tomas aéreas del río, las entrevistas a los personajes y el análisis de la deriva urbana.
         </p>
         
-        <div class="bg-slate-950 p-2.5 rounded-3xl shadow-2xl border border-slate-200/50 dark:border-slate-850">
+        <div class="bg-slate-950 p-2.5 rounded-3xl shadow-2xl border border-slate-200/50 ">
           <div class="aspect-video rounded-2xl overflow-hidden bg-black">
             <!-- Embebed YouTube representing the mini-doc -->
             <iframe 

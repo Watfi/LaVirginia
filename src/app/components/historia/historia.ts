@@ -20,21 +20,21 @@ interface TimelineEvent {
 
       <!-- HEADER -->
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="px-3 py-1.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-bold rounded-full uppercase tracking-wider">
+        <span class="px-3 py-1.5 bg-amber-500/10 text-amber-600  text-xs font-bold rounded-full uppercase tracking-wider">
           Patrimonio e Identidad
         </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-950 dark:text-white mt-4 font-heading">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-950  mt-4 font-heading">
           Nuestra Historia
         </h1>
         <div class="w-20 h-1 bg-gradient-to-r from-amber-500 to-emerald-500 mx-auto mt-4 rounded-full"></div>
-        <p class="text-slate-600 dark:text-slate-400 mt-5 leading-relaxed text-sm md:text-base">
+        <p class="text-slate-600  mt-5 leading-relaxed text-sm md:text-base">
           Desde las tierras de los indígenas Ansermas hasta consolidarse como el "Puerto Dulce", conoce el transcurrir histórico y los símbolos que definen a los virginianos.
         </p>
       </div>
 
       <!-- TIMELINE SECTION -->
       <section class="mb-20">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-950 dark:text-white mb-12 font-heading text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-950  mb-12 font-heading text-center">
           Línea del Tiempo Histórica
         </h2>
 
@@ -50,16 +50,17 @@ interface TimelineEvent {
               <!-- MOBILE LAYOUT: simple card with left border -->
               <div class="md:hidden flex gap-4 items-start pb-8 last:pb-0">
                 <div class="flex flex-col items-center pt-1 flex-shrink-0">
-                  <div class="w-4 h-4 rounded-full border-2 border-white dark:border-slate-950 shadow-md" [ngClass]="event.colorDot"></div>
-                  <div class="w-0.5 flex-1 mt-2 bg-slate-200 dark:bg-slate-800"></div>
+                  <div class="w-4 h-4 rounded-full border-2 border-white  shadow-md" [ngClass]="event.colorDot"></div>
+                  <div class="w-0.5 flex-1 mt-2 bg-slate-200 "></div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/80 rounded-2xl p-5 shadow-md flex-1">
-                  <span class="inline-block px-2 py-0.5 text-[10px] font-bold rounded-lg mb-2 uppercase tracking-wide" [ngClass]="event.colorBadge">
+                <div class="bg-amber-50 border-2 border-amber-100 rounded-2xl p-5 shadow-md flex-1 relative overflow-hidden">
+                  <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
+                  <span class="inline-block px-2 py-0.5 text-[10px] font-bold rounded-lg mb-2 uppercase tracking-wide relative z-10" [ngClass]="event.colorBadge">
                     {{ event.tag }}
                   </span>
-                  <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white font-heading">{{ event.year }}</h3>
-                  <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200 mt-1 mb-2">{{ event.title }}</h4>
-                  <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">{{ event.description }}</p>
+                  <h3 class="text-2xl font-extrabold text-stone-900 font-heading relative z-10">{{ event.year }}</h3>
+                  <h4 class="text-sm font-bold text-stone-800 mt-1 mb-2 relative z-10">{{ event.title }}</h4>
+                  <p class="text-stone-700 text-xs leading-relaxed relative z-10">{{ event.description }}</p>
                 </div>
               </div>
 
@@ -69,31 +70,33 @@ interface TimelineEvent {
                 <!-- LEFT column -->
                 <div [ngClass]="i % 2 === 0 ? 'flex justify-end pr-8' : 'flex pr-8 invisible'">
                   <div *ngIf="i % 2 === 0"
-                       class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 max-w-xs w-full text-right">
-                    <span class="inline-block px-2 py-0.5 text-[10px] font-bold rounded-lg mb-2 uppercase tracking-wide" [ngClass]="event.colorBadge">
+                       class="bg-amber-50 border-2 border-amber-100 rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 max-w-xs w-full text-right relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
+                    <span class="inline-block px-2 py-0.5 text-[10px] font-bold rounded-lg mb-2 uppercase tracking-wide relative z-10" [ngClass]="event.colorBadge">
                       {{ event.tag }}
                     </span>
-                    <h3 class="text-3xl font-extrabold text-slate-900 dark:text-white font-heading">{{ event.year }}</h3>
-                    <h4 class="text-base font-bold text-slate-800 dark:text-slate-200 mt-1 mb-2">{{ event.title }}</h4>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{{ event.description }}</p>
+                    <h3 class="text-3xl font-extrabold text-stone-900 font-heading relative z-10">{{ event.year }}</h3>
+                    <h4 class="text-base font-bold text-stone-800 mt-1 mb-2 relative z-10">{{ event.title }}</h4>
+                    <p class="text-stone-700 text-sm leading-relaxed relative z-10">{{ event.description }}</p>
                   </div>
                 </div>
 
                 <!-- CENTER: dot -->
                 <div class="flex flex-col items-center z-10 px-0">
-                  <div class="w-5 h-5 rounded-full border-2 border-white dark:border-slate-950 shadow-lg ring-4 ring-white/30 dark:ring-slate-900/50" [ngClass]="event.colorDot"></div>
+                  <div class="w-5 h-5 rounded-full border-2 border-white  shadow-lg ring-4 ring-white/30 " [ngClass]="event.colorDot"></div>
                 </div>
 
                 <!-- RIGHT column -->
                 <div [ngClass]="i % 2 !== 0 ? 'flex justify-start pl-8' : 'flex pl-8 invisible'">
                   <div *ngIf="i % 2 !== 0"
-                       class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/80 rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 max-w-xs w-full text-left">
-                    <span class="inline-block px-2 py-0.5 text-[10px] font-bold rounded-lg mb-2 uppercase tracking-wide" [ngClass]="event.colorBadge">
+                       class="bg-amber-50 border-2 border-amber-100 rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 max-w-xs w-full text-left relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
+                    <span class="inline-block px-2 py-0.5 text-[10px] font-bold rounded-lg mb-2 uppercase tracking-wide relative z-10" [ngClass]="event.colorBadge">
                       {{ event.tag }}
                     </span>
-                    <h3 class="text-3xl font-extrabold text-slate-900 dark:text-white font-heading">{{ event.year }}</h3>
-                    <h4 class="text-base font-bold text-slate-800 dark:text-slate-200 mt-1 mb-2">{{ event.title }}</h4>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{{ event.description }}</p>
+                    <h3 class="text-3xl font-extrabold text-stone-900 font-heading relative z-10">{{ event.year }}</h3>
+                    <h4 class="text-base font-bold text-stone-800 mt-1 mb-2 relative z-10">{{ event.title }}</h4>
+                    <p class="text-stone-700 text-sm leading-relaxed relative z-10">{{ event.description }}</p>
                   </div>
                 </div>
 
@@ -133,85 +136,88 @@ interface TimelineEvent {
 
       <!-- SYMBOLS SECTION -->
       <section>
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-950 dark:text-white mb-12 font-heading text-center">
-          Símbolos Municipales
-        </h2>
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-stone-900 font-heading mb-4">
+            Símbolos Municipales
+          </h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-amber-600 to-amber-400 mx-auto rounded-full"></div>
+        </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           <!-- BANDERA -->
-          <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/80 p-8 rounded-3xl shadow-md flex flex-col items-center text-center">
+          <div class="bg-amber-50 border-2 border-amber-100 p-8 rounded-3xl shadow-md flex flex-col items-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
             <!-- Simulated Flag CSS -->
-            <div class="w-44 h-28 rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700 flex flex-col mb-6">
+            <div class="w-44 h-28 rounded-xl overflow-hidden shadow-lg border border-stone-300 flex flex-col mb-6 relative z-10">
               <div class="flex-1 bg-amber-400"></div>
               <div class="flex-1 bg-emerald-600"></div>
               <div class="flex-1 bg-amber-400"></div>
             </div>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mb-3">La Bandera</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            <h3 class="text-2xl font-extrabold text-stone-900 font-heading mb-3 relative z-10">La Bandera</h3>
+            <p class="text-stone-700 text-sm leading-relaxed relative z-10">
               Creada en 1953, consta de tres franjas iguales: <strong>amarillo</strong> (riqueza y el sol radiante) y <strong>verde</strong> (fertilidad y esperanza). Colores que identifican a La Virginia en toda Colombia.
             </p>
           </div>
 
           <!-- ESCUDO -->
-          <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/80 p-8 rounded-3xl shadow-md flex flex-col items-center text-center">
-            <div class="w-28 h-28 flex items-center justify-center bg-amber-500/10 rounded-full text-amber-500 mb-6 border border-amber-500/20">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3C12 3 4 6 4 13a8 8 0 0016 0C20 6 12 3 12 3z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v6l3 2"/>
-              </svg>
+          <div class="bg-amber-50 border-2 border-amber-100 p-8 rounded-3xl shadow-md flex flex-col items-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
+            <div class="w-28 h-28 flex items-center justify-center mb-6 relative z-10">
+              <img src="assets/Escudo_de_La_Virginia.svg.png" alt="Escudo de La Virginia" class="w-full h-full object-contain drop-shadow-md">
             </div>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mb-3">El Escudo</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            <h3 class="text-2xl font-extrabold text-stone-900 font-heading mb-3 relative z-10">El Escudo</h3>
+            <p class="text-stone-700 text-sm leading-relaxed relative z-10">
               Adoptado en 1985. Representa el sol, el Puente Bernardo Arango sobre el río Cauca, una canoa con canalete, la caña de azúcar, el café y la llave de oro que simboliza la entrada al occidente colombiano.
             </p>
           </div>
 
           <!-- HIMNO -->
-          <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/80 p-8 rounded-3xl shadow-md flex flex-col items-center w-full">
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mb-1 text-center">El Himno</h3>
-            <p class="text-[10px] text-slate-400 mb-4 text-center">Letra: Francisco González Lotero &nbsp;·&nbsp; Música: Rodrigo Arango</p>
+          <div class="bg-amber-50 border-2 border-amber-100 p-8 rounded-3xl shadow-md flex flex-col items-center w-full relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
+            <h3 class="text-2xl font-extrabold text-stone-900 font-heading mb-1 text-center relative z-10">El Himno</h3>
+            <p class="text-[10px] text-stone-500 mb-4 text-center font-bold relative z-10">Letra: Francisco González Lotero &nbsp;·&nbsp; Música: Rodrigo Arango</p>
 
             <!-- Audio Player (MP3 real) -->
-            <div class="w-full bg-slate-50 dark:bg-slate-950 p-4 rounded-2xl border border-slate-200/50 dark:border-slate-800 mb-5">
+            <div class="w-full bg-white p-4 rounded-2xl border border-stone-200 mb-5 shadow-sm relative z-10">
               <div class="flex items-center gap-3 mb-3">
                 <button (click)="toggleAnthem()"
-                        class="w-10 h-10 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center transition shadow-md focus:outline-none flex-shrink-0">
+                        class="w-10 h-10 rounded-full bg-amber-600 hover:bg-amber-700 text-white flex items-center justify-center transition shadow-md focus:outline-none flex-shrink-0">
                   <span *ngIf="!isPlaying" class="ml-0.5">▶</span>
                   <span *ngIf="isPlaying">❚❚</span>
                 </button>
                 <div class="flex-1 min-w-0">
-                  <p class="text-xs font-bold text-slate-700 dark:text-slate-300 truncate">Himno de La Virginia</p>
-                  <p class="text-[10px] text-slate-400 mt-0.5">F. González Lotero · R. Arango</p>
+                  <p class="text-xs font-bold text-stone-800 truncate">Himno de La Virginia</p>
+                  <p class="text-[10px] text-stone-500 mt-0.5">F. González Lotero · R. Arango</p>
                 </div>
-                <span class="text-[10px] font-mono text-slate-400 flex-shrink-0">{{ elapsedLabel }} / {{ durationLabel }}</span>
+                <span class="text-[10px] font-mono text-stone-500 flex-shrink-0">{{ elapsedLabel }} / {{ durationLabel }}</span>
               </div>
 
               <!-- Progress Bar clickable -->
-              <div class="h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden cursor-pointer" (click)="seekAudio($event)">
-                <div class="h-full bg-emerald-500 transition-all duration-100 rounded-full" [style.width.%]="audioProgress"></div>
+              <div class="h-1.5 bg-stone-200 rounded-full overflow-hidden cursor-pointer" (click)="seekAudio($event)">
+                <div class="h-full bg-amber-500 transition-all duration-100 rounded-full" [style.width.%]="audioProgress"></div>
               </div>
 
               <!-- Animated waveform -->
               <div class="flex gap-0.5 justify-center items-end h-6 mt-3">
                 <div *ngFor="let bar of soundBars"
-                     class="w-1 bg-emerald-500/60 rounded-full transition-all duration-200"
+                     class="w-1 bg-amber-500/60 rounded-full transition-all duration-200"
                      [style.height.px]="isPlaying ? bar : 3"></div>
               </div>
             </div>
 
             <!-- Letra real del himno -->
-            <div class="h-52 overflow-y-auto w-full text-center text-xs text-slate-600 dark:text-slate-400 space-y-3 pr-2 leading-relaxed">
-              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">— Coro —</p>
+            <div class="h-52 overflow-y-auto w-full text-center text-xs text-stone-700 space-y-3 pr-2 leading-relaxed font-serif relative z-10">
+              <p class="font-bold text-amber-900 uppercase tracking-wider text-[10px]">— Coro —</p>
               <p>Dos ríos te bañan de riquezas plenos<br>prodigando savias, resinas y mieles,<br>Y tus fuertes hijos al trabajo fieles<br>te dan abundancia de bienes terrenos.</p>
 
-              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">— Estrofa I —</p>
+              <p class="font-bold text-amber-900 uppercase tracking-wider text-[10px]">— Estrofa I —</p>
               <p>Tu bravo linaje, tu ancestro guerrero,<br>fundó su querencia en ubérrimo valle<br>do cimbra el arisco machete que raye<br>frontera inviolable de amor altanero.<br>Valor y coraje de inmortal acero<br>forjó tu hidalguía, ¡Que jamás desmaye!<br>Arrancó a la selva tu primera calle<br>Que Sopinga fuera tu nombre primero.</p>
 
-              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">— Estrofa II —</p>
+              <p class="font-bold text-amber-900 uppercase tracking-wider text-[10px]">— Estrofa II —</p>
               <p>Perla de marfiles de un hermoso valle,<br>Eres guía y guarda de aquellos pioneros<br>Llegados de un mundo de recios hacheros<br>a escribir la historia do libertad de halle.<br>Libre ya el esclavo, sin que lo desmaye<br>Temor a la selva, se hace caballero<br>Recias hazañas, de lo duradero<br>construyendo un mundo que nadie avasalle.</p>
 
-              <p class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider text-[10px]">— Estrofa III —</p>
+              <p class="font-bold text-amber-900 uppercase tracking-wider text-[10px]">— Estrofa III —</p>
               <p>Tu espíritu libre ya nunca te falle<br>Puerta de bonanzas y emporio cimero<br>Te ha ungido el destino con noble venero<br>Para que el futuro tu presente ensaye.<br>Enclave de honrosos caminos y calles<br>Desde donde el hombre divisa el crucero<br>De puertas abiertas a lo venidero<br>Y donde tus hijos la historia atalayen.</p>
             </div>
           </div>
@@ -239,8 +245,8 @@ export class HistoriaComponent implements OnDestroy {
       title: 'Territorio de Ansermas y Apías',
       tag: 'Orígenes',
       colorDot:   'bg-blue-500',
-      colorBadge: 'bg-blue-100 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300',
-      colorText:  'text-blue-700 dark:text-blue-300',
+      colorBadge: 'bg-blue-100  text-blue-700 ',
+      colorText:  'text-blue-700 ',
       description: 'El territorio estuvo habitado por tribus indígenas Ansermas y Apías, quienes aprovechaban la pesca del río Cauca y la caza en el bosque seco tropical.'
     },
     {
@@ -248,8 +254,8 @@ export class HistoriaComponent implements OnDestroy {
       title: 'Fundación del Poblado',
       tag: 'Fundación',
       colorDot:   'bg-amber-500',
-      colorBadge: 'bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300',
-      colorText:  'text-amber-700 dark:text-amber-300',
+      colorBadge: 'bg-amber-100  text-amber-700 ',
+      colorText:  'text-amber-700 ',
       description: 'El 23 de noviembre de 1888 se oficializa su fundación bajo el impulso de colonos encabezados por Francisco Jaramillo Ochoa. El asentamiento era conocido como Nigricia o Sopinga.'
     },
     {
@@ -257,8 +263,8 @@ export class HistoriaComponent implements OnDestroy {
       title: 'Construcción del Puente Colgante',
       tag: 'Ingeniería',
       colorDot:   'bg-emerald-500',
-      colorBadge: 'bg-emerald-100 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300',
-      colorText:  'text-emerald-700 dark:text-emerald-300',
+      colorBadge: 'bg-emerald-100  text-emerald-700 ',
+      colorText:  'text-emerald-700 ',
       description: 'Se inaugura el Puente Bernardo Arango, joya de la ingeniería de la época. Su estructura de acero y madera fue enlace fundamental para expandir el comercio fluvial hacia Caldas.'
     },
     {
@@ -266,8 +272,8 @@ export class HistoriaComponent implements OnDestroy {
       title: 'Municipio Independiente',
       tag: 'Erección Municipal',
       colorDot:   'bg-indigo-500',
-      colorBadge: 'bg-indigo-100 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300',
-      colorText:  'text-indigo-700 dark:text-indigo-300',
+      colorBadge: 'bg-indigo-100  text-indigo-700 ',
+      colorText:  'text-indigo-700 ',
       description: 'Bajo la Ordenanza N° 57, La Virginia es erigida oficialmente como municipio autónomo, independizándose de Pereira dentro del departamento de Risaralda.'
     },
     {
@@ -275,8 +281,8 @@ export class HistoriaComponent implements OnDestroy {
       title: 'El Puerto Dulce de Risaralda',
       tag: 'Actualidad',
       colorDot:   'bg-emerald-600',
-      colorBadge: 'bg-emerald-100 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300',
-      colorText:  'text-emerald-700 dark:text-emerald-300',
+      colorBadge: 'bg-emerald-100  text-emerald-700 ',
+      colorText:  'text-emerald-700 ',
       description: 'La Virginia se consolida como centro turístico regional clave gracias a su Ruta del Pescado, las reservas forestales de El Guásimo, los ríos y la cálida hospitalidad de su gente.'
     }
   ];

@@ -21,20 +21,20 @@ interface Dish {
     <div class="animate-fade-in py-12 px-4 max-w-6xl mx-auto">
       <!-- HEADER -->
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold rounded-full uppercase tracking-wider">
+        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-600  text-xs font-bold rounded-full uppercase tracking-wider">
           Ruta del Pescado
         </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-950 dark:text-white mt-4 font-heading">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-950  mt-4 font-heading">
           Gastronomía Local
         </h1>
         <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-amber-500 mx-auto mt-4 rounded-full"></div>
-        <p class="text-slate-600 dark:text-slate-400 mt-5 leading-relaxed">
+        <p class="text-slate-600  mt-5 leading-relaxed">
           Deleita tu paladar con los sabores tradicionales de La Virginia. La confluencia de ríos y la herencia de pescadores dan vida a platos memorables cocinados a fuego de leña.
         </p>
       </div>
 
       <!-- INSIGNIA DISH HIGHLIGHT -->
-      <section class="mb-20 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 md:p-10 rounded-3xl shadow-xl">
+      <section class="mb-20 bg-white  border border-slate-100  p-6 md:p-10 rounded-3xl shadow-xl">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
           <div class="lg:col-span-5 relative h-72 lg:h-96 rounded-2xl overflow-hidden bg-amber-950 shadow-md">
             <img src="assets/images/viudo-insignia.jpg" alt="Viudo de Pescado" class="w-full h-full object-cover opacity-95" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80'">
@@ -45,32 +45,32 @@ interface Dish {
           </div>
           
           <div class="lg:col-span-7">
-            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">La Especialidad del Puerto Dulce</span>
-            <h2 class="text-2xl md:text-4.5xl font-extrabold text-slate-900 dark:text-white mt-1 mb-5 font-heading">
+            <span class="text-xs font-bold text-emerald-600  uppercase tracking-widest">La Especialidad del Puerto Dulce</span>
+            <h2 class="text-2xl md:text-4.5xl font-extrabold text-slate-900  mt-1 mb-5 font-heading">
               El Famoso "Viudo de Pescado"
             </h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed mb-6">
+            <p class="text-slate-600  text-sm md:text-base leading-relaxed mb-6">
               El Viudo de Pescado es una obra maestra culinaria. Su preparación tradicional consiste en cocinar el pescado al vapor sobre una base de plátano, yuca y arracacha, cubriéndolo luego con un guiso criollo ("hogao") denso y condimentado con finas hierbas. Su nombre proviene de la vieja leyenda de los pescadores del río Cauca, quienes servían este plato a la orilla del río rindiendo tributo a las almas solitarias de los navegantes.
             </p>
             
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-              <div class="bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border border-slate-100 dark:border-slate-800/80">
+              <div class="bg-slate-50  p-4 rounded-xl border border-slate-100 ">
                 <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Tiempo</span>
-                <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">45 Minutos</p>
+                <p class="text-sm font-bold text-slate-800  mt-0.5">45 Minutos</p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border border-slate-100 dark:border-slate-800/80">
+              <div class="bg-slate-50  p-4 rounded-xl border border-slate-100 ">
                 <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Ingrediente Principal</span>
-                <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">Bocachico / Capaz</p>
+                <p class="text-sm font-bold text-slate-800  mt-0.5">Bocachico / Capaz</p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 col-span-2 md:col-span-1">
+              <div class="bg-slate-50  p-4 rounded-xl border border-slate-100  col-span-2 md:col-span-1">
                 <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Acompañamiento</span>
-                <p class="text-sm font-bold text-slate-800 dark:text-slate-200 mt-0.5">Consomé y Arroz</p>
+                <p class="text-sm font-bold text-slate-800  mt-0.5">Consomé y Arroz</p>
               </div>
             </div>
             
-            <div class="p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/50 rounded-xl flex gap-3 items-start">
+            <div class="p-4 bg-emerald-50  border border-emerald-100  rounded-xl flex gap-3 items-start">
               <span class="text-xl">💡</span>
-              <p class="text-xs md:text-sm text-emerald-800 dark:text-emerald-300 leading-relaxed">
+              <p class="text-xs md:text-sm text-emerald-800  leading-relaxed">
                 <strong>Consejo del Pescador:</strong> Se acompaña obligatoriamente de un buen consomé caliente preparado con la cabeza del pescado, condimentado con cilantro cimarrón y unas gotas de limón.
               </p>
             </div>
@@ -82,10 +82,10 @@ interface Dish {
       <section class="mb-12">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
           <div>
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-950 dark:text-white font-heading">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-950  font-heading">
               Recetario y Platillos Tradicionales
             </h2>
-            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm mt-1">
+            <p class="text-slate-500  text-xs md:text-sm mt-1">
               Haz clic en cualquier platillo para abrir el recetario interactivo y ver sus ingredientes y secretos.
             </p>
           </div>
@@ -97,7 +97,7 @@ interface Dish {
                     class="px-4 py-1.5 rounded-full text-xs font-bold transition duration-300 border focus:outline-none"
                     [ngClass]="selectedCategory === cat 
                       ? 'bg-emerald-600 border-emerald-600 text-white shadow-md' 
-                      : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'">
+                      : 'bg-white  border-slate-200  text-slate-600  hover:bg-slate-50 :bg-slate-800'">
               {{ cat }}
             </button>
           </div>
@@ -107,8 +107,8 @@ interface Dish {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div *ngFor="let dish of filteredDishes" 
                (click)="toggleActiveDish(dish.id)"
-               class="group bg-white dark:bg-slate-900 border rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
-               [ngClass]="activeDishId === dish.id ? 'border-emerald-500 ring-2 ring-emerald-500/20' : 'border-slate-100 dark:border-slate-800/80'">
+               class="group bg-white  border rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
+               [ngClass]="activeDishId === dish.id ? 'border-emerald-500 ring-2 ring-emerald-500/20' : 'border-slate-100 '">
             
             <!-- Dish Image -->
             <div class="relative h-48 bg-slate-950 overflow-hidden">
@@ -121,39 +121,39 @@ interface Dish {
             <!-- Dish Info Brief -->
             <div class="p-5">
               <div class="flex justify-between items-start gap-2 mb-1.5">
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">
+                <h3 class="text-lg font-bold text-slate-900  font-heading group-hover:text-emerald-600 :text-emerald-400 transition">
                   {{ dish.name }}
                 </h3>
                 <span class="text-[10px] px-2 py-0.5 rounded-full font-semibold"
-                      [ngClass]="dish.difficulty === 'Fácil' ? 'bg-green-100 dark:bg-green-950/40 text-green-700 dark:text-green-300' : dish.difficulty === 'Medio' ? 'bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300' : 'bg-red-100 dark:bg-red-950/40 text-red-700 dark:text-red-300'">
+                      [ngClass]="dish.difficulty === 'Fácil' ? 'bg-green-100  text-green-700 ' : dish.difficulty === 'Medio' ? 'bg-amber-100  text-amber-700 ' : 'bg-red-100  text-red-700 '">
                   {{ dish.difficulty }}
                 </span>
               </div>
-              <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed line-clamp-2 mb-4">
+              <p class="text-slate-600  text-xs leading-relaxed line-clamp-2 mb-4">
                 {{ dish.description }}
               </p>
               
-              <div class="flex justify-between items-center text-[10px] text-slate-400 border-t border-slate-100 dark:border-slate-800/80 pt-3">
+              <div class="flex justify-between items-center text-[10px] text-slate-400 border-t border-slate-100  pt-3">
                 <span>⏲ {{ dish.prepTime }}</span>
-                <span class="text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-0.5">
+                <span class="text-emerald-600  font-bold flex items-center gap-0.5">
                   {{ activeDishId === dish.id ? 'Ocultar Receta ▲' : 'Ver Receta ▼' }}
                 </span>
               </div>
 
               <!-- Collapsible Recipe Details (Premium Feature) -->
               <div *ngIf="activeDishId === dish.id" 
-                   class="mt-4 pt-4 border-t border-dashed border-slate-200 dark:border-slate-800 animate-slide-down"
+                   class="mt-4 pt-4 border-t border-dashed border-slate-200  animate-slide-down"
                    (click)="$event.stopPropagation();">
-                <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-2">Ingredientes Requeridos:</h4>
-                <ul class="list-disc pl-4 text-xs text-slate-600 dark:text-slate-400 space-y-1 mb-4">
+                <h4 class="text-xs font-bold text-slate-800  uppercase tracking-wider mb-2">Ingredientes Requeridos:</h4>
+                <ul class="list-disc pl-4 text-xs text-slate-600  space-y-1 mb-4">
                   <li *ngFor="let ing of dish.ingredients">{{ ing }}</li>
                 </ul>
                 
-                <div class="p-3 bg-amber-500/5 dark:bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                  <h4 class="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1">
+                <div class="p-3 bg-amber-500/5  border border-amber-500/20 rounded-xl">
+                  <h4 class="text-[10px] font-bold text-amber-600  uppercase tracking-wider flex items-center gap-1">
                     ✨ Secreto del Chef Virginiano:
                   </h4>
-                  <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed mt-1 italic">
+                  <p class="text-[11px] text-slate-600  leading-relaxed mt-1 italic">
                     "{{ dish.secretTip }}"
                   </p>
                 </div>
