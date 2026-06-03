@@ -136,97 +136,51 @@ interface Soundscape {
         </div>
       </section>
 
-      <!-- ENTREVISTAS & AMBIENTE SONORO -->
-      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24">
+      <!-- AMBIENTE SONORO (MICRORRELATOS) -->
+      <section class="mb-24">
         
-        <!-- Entrevistas -->
-        <div class="bg-white  border border-slate-100  p-6 md:p-8 rounded-3xl shadow-md flex flex-col justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-emerald-600  uppercase tracking-widest block mb-2">Observación Participante</span>
-            <h3 class="text-xl md:text-2.5xl font-extrabold text-slate-900  font-heading mb-4">
-              Entrevistas Hipermediales
+        <div class="max-w-2xl mx-auto bg-amber-50 border-2 border-amber-100 p-6 md:p-8 rounded-3xl shadow-md relative overflow-hidden">
+          <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
+          <div class="relative z-10">
+            <span class="text-[10px] font-bold text-amber-700 uppercase tracking-widest block mb-2 text-center">Narración de Microrrelatos</span>
+            <h3 class="text-2xl md:text-3xl font-extrabold text-stone-900 font-heading mb-6 text-center">
+              Escucha las historias
             </h3>
-            <p class="text-xs md:text-sm text-slate-600  leading-relaxed mb-6">
-              Diálogos a profundidad grabados en el territorio para comprender la transición física de las trochas a lo urbano y las dinámicas cotidianas del comercio informal y la convivencia vecinal.
-            </p>
-
-            <div class="space-y-4">
-              <!-- Interview card 1 -->
-              <div class="p-4 bg-slate-50  rounded-2xl border border-slate-150  flex gap-4 items-center">
-                <button class="w-12 h-12 flex-shrink-0 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md hover:bg-emerald-700 transition focus:outline-none">
-                  ▶
-                </button>
-                <div class="flex-1 min-w-0">
-                  <h4 class="text-xs md:text-sm font-bold text-slate-900  truncate">Entrevista 1: Doña Miriam de San Cayetano</h4>
-                  <p class="text-[10px] text-slate-450 mt-0.5">Tema: Fundación, mitos de río y Caballero Gaucho (Audio MP3)</p>
-                </div>
-                <span class="text-xs text-slate-400 font-semibold">12:34</span>
-              </div>
-
-              <!-- Interview card 2 -->
-              <div class="p-4 bg-slate-50  rounded-2xl border border-slate-150  flex gap-4 items-center">
-                <button class="w-12 h-12 flex-shrink-0 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md hover:bg-emerald-700 transition focus:outline-none">
-                  ▶
-                </button>
-                <div class="flex-1 min-w-0">
-                  <h4 class="text-xs md:text-sm font-bold text-slate-900  truncate">Entrevista 2: Testimonio de "El Rolo"</h4>
-                  <p class="text-[10px] text-slate-450 mt-0.5">Tema: Seguridad barrial y civismo vial (Video Audiovisual)</p>
-                </div>
-                <span class="text-xs text-slate-400 font-semibold">08:15</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-6 border-t border-slate-100  pt-4 text-center">
-            <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Mínimo 2 Registros Requeridos</span>
-          </div>
-        </div>
-
-        <!-- Ambiente Sonoro -->
-        <div class="bg-white  border border-slate-100  p-6 md:p-8 rounded-3xl shadow-md flex flex-col justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-blue-600  uppercase tracking-widest block mb-2">Paisaje Acústico</span>
-            <h3 class="text-xl md:text-2.5xl font-extrabold text-slate-900  font-heading mb-4">
-              Ambientes Sonoros del Municipio
-            </h3>
-            <p class="text-xs md:text-sm text-slate-600  leading-relaxed mb-6">
-              Capturas biaurales de los sonidos característicos de La Virginia. Escucha el susurro de la confluencia de los ríos, el bullicio de los motores de canoas y la plaza del mercado.
-            </p>
-
+            
             <!-- Soundscape list -->
             <div class="space-y-3">
               <div *ngFor="let track of tracks"
                    (click)="playTrack(track.id, track.text)"
                    class="p-3 rounded-xl border transition duration-200 cursor-pointer flex justify-between items-center"
                    [ngClass]="activeTrackId === track.id
-                     ? 'bg-blue-500/5 border-blue-500 text-blue-900'
-                     : 'bg-slate-50 border-stone-200 hover:bg-amber-50 text-stone-800'">
+                     ? 'bg-amber-100 border-amber-400 text-stone-900 shadow-inner'
+                     : 'bg-white border-stone-200 hover:bg-amber-50 text-stone-800'">
                 <div class="flex items-center gap-3">
                   <span class="text-sm">{{ activeTrackId === track.id && isTrackPlaying ? '⏸️' : '🔊' }}</span>
                   <div>
-                    <h4 class="text-xs font-bold leading-tight font-sans">{{ track.title }}</h4>
-                    <p class="text-[9px] text-stone-400 mt-0.5 font-sans">{{ track.description }}</p>
+                    <h4 class="text-sm font-bold leading-tight font-sans text-stone-900">{{ track.title }}</h4>
+                    <p class="text-[10px] text-stone-500 mt-0.5 font-sans">{{ track.description }}</p>
                   </div>
                 </div>
-                <span class="text-[10px] font-mono text-stone-400">Narrar</span>
+                <span class="text-[10px] font-mono text-amber-600 font-bold uppercase">Narrar</span>
               </div>
               <!-- Stop button -->
               <button *ngIf="isTrackPlaying" (click)="stopSpeech()"
-                      class="w-full mt-2 py-2 rounded-lg bg-red-100 hover:bg-red-200 text-red-700 text-xs font-sans font-bold transition">
+                      class="w-full mt-3 py-2.5 rounded-lg bg-red-100 border border-red-200 hover:bg-red-200 text-red-700 text-xs font-sans font-bold transition shadow-sm">
                 ⏹ Detener Narración
               </button>
             </div>
           </div>
 
           <!-- Animated Waveform -->
-          <div class="mt-6 flex flex-col gap-2">
-            <div class="flex gap-0.5 justify-center items-end h-8">
+          <div class="mt-8 flex flex-col gap-2 relative z-10">
+            <div class="flex gap-1 justify-center items-end h-8">
               <div *ngFor="let bar of soundBars"
-                   class="w-1 bg-blue-500 rounded-full transition-all duration-200"
+                   class="w-1.5 bg-amber-500 rounded-full transition-all duration-200"
                    [style.height.px]="isTrackPlaying ? bar : 3"></div>
             </div>
-            <p class="text-[9px] text-stone-400 text-center font-sans font-bold uppercase tracking-widest mt-1">
-              {{ isTrackPlaying ? 'Narrando con voz de Microsoft en Español...' : 'Selecciona un relato para escuchar' }}
+            <p class="text-[10px] text-stone-500 text-center font-sans font-bold uppercase tracking-widest mt-2">
+              {{ isTrackPlaying ? 'Narrando...' : 'Selecciona un relato para escuchar' }}
             </p>
           </div>
         </div>
@@ -287,7 +241,7 @@ interface Soundscape {
           <div class="aspect-video rounded-2xl overflow-hidden bg-black">
             <!-- Embebed YouTube representing the mini-doc -->
             <iframe 
-              src="https://www.youtube.com/embed/N65nQZ4YvYc" 
+              src="https://www.youtube.com/embed/H_itndvSb1k" 
               title="Mini Documental - Territorio Simbólico La Virginia" 
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

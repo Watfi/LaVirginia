@@ -107,27 +107,28 @@ interface TimelineEvent {
       </section>
 
       <!-- SOPINGA CONTEXT SECTION -->
-      <section class="py-12 px-6 rounded-3xl bg-gradient-to-br from-emerald-950 via-slate-900 to-amber-950 text-white mb-20 shadow-xl relative overflow-hidden">
-        <div class="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 -mb-16 -ml-16 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <section class="py-12 px-6 rounded-3xl bg-amber-100 border-2 border-amber-200 mb-20 shadow-xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
+        <div class="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -mb-16 -ml-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
-            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">El Origen del Nombre</span>
-            <h2 class="text-2xl md:text-3xl font-extrabold font-heading mt-2 mb-6">De Sopinga a La Virginia</h2>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            <span class="text-amber-700 text-xs font-bold uppercase tracking-widest">El Origen del Nombre</span>
+            <h2 class="text-2xl md:text-3xl font-extrabold font-heading mt-2 mb-6 text-stone-900">De Sopinga a La Virginia</h2>
+            <p class="text-stone-700 text-sm leading-relaxed mb-4">
               Antes de ser <strong>La Virginia</strong>, la región era conocida como <strong>Nigricia</strong> o <strong>Sopinga</strong>. Este último término heredó su nombre del cacique Sopinga, quien lideraba las tribus originarias en la confluencia de los ríos.
             </p>
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p class="text-stone-700 text-sm leading-relaxed">
               Con la llegada de colonos antioqueños y comunidades afrodescendientes, el asentamiento tomó vitalidad comercial. A principios del siglo XX, la devoción a la Virgen y el auge como puerto fluvial consolidaron el nombre actual.
             </p>
           </div>
-          <div class="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md">
-            <h3 class="text-lg font-bold text-amber-300 mb-4 font-heading">¿Sabías qué?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed mb-3">
+          <div class="bg-white/40 border border-amber-300/50 p-6 rounded-2xl backdrop-blur-md shadow-sm">
+            <h3 class="text-lg font-bold text-amber-800 mb-4 font-heading">¿Sabías qué?</h3>
+            <p class="text-stone-700 text-sm leading-relaxed mb-3">
               El río Cauca era la principal vía comercial de Colombia a finales del siglo XIX y principios del XX. La Virginia funcionaba como puerto de desembarco para mercancías hacia Caldas y el suroeste antioqueño.
             </p>
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p class="text-stone-700 text-sm leading-relaxed">
               Las lanchas de vapor cargaban café, tabaco y caña de azúcar, originando el apodo de <strong>"Puerto Dulce"</strong> por el intenso comercio de panela y caña cultivada en sus fértiles valles.
             </p>
           </div>

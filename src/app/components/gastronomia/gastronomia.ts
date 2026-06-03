@@ -34,13 +34,14 @@ interface Dish {
       </div>
 
       <!-- INSIGNIA DISH HIGHLIGHT -->
-      <section class="mb-20 bg-white  border border-slate-100  p-6 md:p-10 rounded-3xl shadow-xl">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
-          <div class="lg:col-span-5 relative h-72 lg:h-96 rounded-2xl overflow-hidden bg-amber-950 shadow-md">
-            <img src="assets/images/viudo-insignia.jpg" alt="Viudo de Pescado" class="w-full h-full object-cover opacity-95" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80'">
-            <div class="absolute bottom-4 left-4 right-4 bg-slate-950/80 backdrop-blur-md p-4 rounded-xl border border-white/10">
-              <span class="text-xs text-amber-400 font-bold uppercase tracking-wider">Plato Insignia</span>
-              <h3 class="text-lg font-bold text-white font-heading mt-0.5">Viudo de Pescado en Salsa</h3>
+      <section class="mb-20 bg-amber-50 border-2 border-amber-100 p-6 md:p-10 rounded-3xl shadow-xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center relative z-10">
+          <div class="lg:col-span-5 relative h-72 lg:h-96 rounded-2xl overflow-hidden shadow-md border-2 border-stone-200">
+            <img src="assets/gastronomia/viudo_de_pescado_.jpg" alt="Viudo de Pescado" class="w-full h-full object-cover">
+            <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-xl border border-stone-200 shadow-sm">
+              <span class="text-xs text-amber-700 font-bold uppercase tracking-wider">Plato Insignia</span>
+              <h3 class="text-lg font-extrabold text-stone-900 font-heading mt-0.5">Viudo de Pescado</h3>
             </div>
           </div>
           
