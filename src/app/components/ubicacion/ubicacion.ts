@@ -62,7 +62,7 @@ interface PointOfInterest {
       </section>
 
       <!-- INTERACTIVE MAP IMPLEMENTED IN ANGULAR UI -->
-      <section class="mb-20">
+      <section id="guasimo" class="mb-20 scroll-mt-24">
         <div class="text-center mb-8">
           <h2 class="text-2xl md:text-3xl font-bold text-slate-950  font-heading">
             Mapa Interactivo de Puntos de Interés

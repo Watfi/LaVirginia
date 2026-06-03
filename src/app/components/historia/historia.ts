@@ -33,7 +33,7 @@ interface TimelineEvent {
       </div>
 
       <!-- TIMELINE SECTION -->
-      <section class="mb-20">
+      <section id="puente-colgante" class="mb-20 scroll-mt-24">
         <h2 class="text-2xl md:text-3xl font-bold text-slate-950  mb-12 font-heading text-center">
           Línea del Tiempo Histórica
         </h2>
@@ -135,8 +135,49 @@ interface TimelineEvent {
         </div>
       </section>
 
+      <!-- LUGARES Y PERSONAJES HISTÓRICOS -->
+      <section class="mb-20">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-stone-900 font-heading mb-4">
+            Lugares y Personajes Históricos
+          </h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-amber-600 to-amber-400 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Caballero Gaucho -->
+          <div id="caballero-gaucho" class="bg-amber-50 border border-amber-200 p-6 rounded-3xl shadow-sm hover:shadow-md transition scroll-mt-24">
+            <div class="w-12 h-12 bg-amber-200 text-amber-800 rounded-full flex items-center justify-center font-bold text-xl mb-4 font-serif">CG</div>
+            <h3 class="text-xl font-bold text-stone-900 font-heading mb-3">El Caballero Gaucho</h3>
+            <p class="text-stone-700 text-sm leading-relaxed">
+              Luis Alberto Posada, más conocido como el "Caballero Gaucho", es uno de los máximos exponentes de la música popular colombiana y un símbolo cultural de La Virginia. Su estatua en el municipio rinde homenaje a su legado musical, recordando a sus habitantes y visitantes la época dorada de sus canciones que relatan las vivencias del pueblo. Su historia vive en las calles y en la memoria de los virginianos.
+            </p>
+          </div>
+
+          <!-- La Capilla -->
+          <div id="la-capilla" class="bg-amber-50 border border-amber-200 p-6 rounded-3xl shadow-sm hover:shadow-md transition scroll-mt-24">
+            <div class="w-12 h-12 bg-indigo-200 text-indigo-800 rounded-full flex items-center justify-center font-bold text-xl mb-4 font-serif">LC</div>
+            <h3 class="text-xl font-bold text-stone-900 font-heading mb-3">La Capilla</h3>
+            <p class="text-stone-700 text-sm leading-relaxed">
+              La Capilla es una joya de la arquitectura religiosa local. A lo largo de las décadas, ha sido el centro espiritual donde se congregan las familias fundadoras. Sus muros resguardan incontables bautismos, matrimonios y fiestas patronales que forman el tejido social y de fe de La Virginia.
+            </p>
+          </div>
+
+          <!-- Cementerio Municipal -->
+          <div id="cementerio" class="bg-amber-50 border border-amber-200 p-6 rounded-3xl shadow-sm hover:shadow-md transition scroll-mt-24">
+            <div class="w-12 h-12 bg-stone-300 text-stone-700 rounded-full flex items-center justify-center font-bold text-xl mb-4 font-serif">CM</div>
+            <h3 class="text-xl font-bold text-stone-900 font-heading mb-3">Cementerio Municipal</h3>
+            <p class="text-stone-700 text-sm leading-relaxed">
+              Más que un campo santo, el Cementerio de La Virginia es un libro abierto de arte funerario y memoria colectiva. En sus pasillos descansan los pioneros, colonos y personajes ilustres que forjaron la identidad del Puerto Dulce, convirtiéndolo en un sitio de profundo respeto y valor histórico.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       <!-- SYMBOLS SECTION -->
-      <section>
+      <section id="simbolos">
         <div class="text-center max-w-2xl mx-auto mb-12">
           <h2 class="text-3xl md:text-4xl font-extrabold text-stone-900 font-heading mb-4">
             Símbolos Municipales

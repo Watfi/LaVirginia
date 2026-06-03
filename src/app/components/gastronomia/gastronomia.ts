@@ -34,7 +34,7 @@ interface Dish {
       </div>
 
       <!-- INSIGNIA DISH HIGHLIGHT -->
-      <section class="mb-20 bg-amber-50 border-2 border-amber-100 p-6 md:p-10 rounded-3xl shadow-xl relative overflow-hidden">
+      <section id="viudo-pescado" class="mb-20 bg-amber-50 border-2 border-amber-100 p-6 md:p-10 rounded-3xl shadow-xl relative overflow-hidden scroll-mt-24">
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-20 pointer-events-none"></div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center relative z-10">
           <div class="lg:col-span-5 relative h-72 lg:h-96 rounded-2xl overflow-hidden shadow-md border-2 border-stone-200">

@@ -119,7 +119,7 @@ import { CommonModule } from '@angular/common';
               <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
                 Construido en 1928, este puente colgante peatonal es el monumento histórico más representativo. Cruza el imponente río Cauca conectando con Caimalito.
               </p>
-              <a routerLink="/historia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver historia &rarr;</a>
+              <a [routerLink]="['/historia']" fragment="puente-colgante" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver historia &rarr;</a>
             </div>
           </div>
 
@@ -134,7 +134,7 @@ import { CommonModule } from '@angular/common';
               <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
                 La Virginia deleita los paladares con el delicioso Viudo de Pescado. La tradición culinaria ribereña ofrece platos frescos y llenos de sabor autóctono.
               </p>
-              <a routerLink="/gastronomia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver delicias &rarr;</a>
+              <a [routerLink]="['/gastronomia']" fragment="viudo-pescado" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver delicias &rarr;</a>
             </div>
           </div>
 
@@ -149,7 +149,7 @@ import { CommonModule } from '@angular/common';
               <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
                 Reserva forestal del bosque seco tropical — ideal para el senderismo ecológico, avistamiento de aves y contacto directo con la naturaleza exuberante.
               </p>
-              <a routerLink="/ubicacion" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver mapa &rarr;</a>
+              <a [routerLink]="['/ubicacion']" fragment="guasimo" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver mapa &rarr;</a>
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@ import { CommonModule } from '@angular/common';
               <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
                 Monumento símbolo de la identidad virgeniana. Rinde homenaje al espíritu libre y trabajador de su gente — punto de encuentro y orgullo ciudadano.
               </p>
-              <a routerLink="/historia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Conocer la historia &rarr;</a>
+              <a [routerLink]="['/historia']" fragment="caballero-gaucho" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Conocer la historia &rarr;</a>
             </div>
           </div>
 
@@ -180,7 +180,7 @@ import { CommonModule } from '@angular/common';
               <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
                 Joya arquitectónica religiosa del municipio. Testigo silencioso de generaciones de fe, bautismos y celebraciones que forman el alma espiritual de La Virginia.
               </p>
-              <a routerLink="/historia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver historia religiosa &rarr;</a>
+              <a [routerLink]="['/historia']" fragment="la-capilla" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver historia religiosa &rarr;</a>
             </div>
           </div>
 
@@ -194,7 +194,7 @@ import { CommonModule } from '@angular/common';
               <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
                 Arte funerario y memoria colectiva. Sus tumbas guardan las historias de familias fundadoras y personajes que construyeron la identidad del municipio.
               </p>
-              <a routerLink="/historia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Explorar raíces &rarr;</a>
+              <a [routerLink]="['/historia']" fragment="cementerio" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Explorar raíces &rarr;</a>
             </div>
           </div>
         </div>
