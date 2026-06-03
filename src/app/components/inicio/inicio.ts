@@ -10,289 +10,290 @@ import { CommonModule } from '@angular/common';
   template: `
     <div class="animate-fade-in">
       <!-- HERO BANNER SECTION -->
-      <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-slate-950 text-white py-20 px-4">
-        <!-- Real Photo Background -->
+      <section class="relative min-h-[88vh] flex items-center justify-center overflow-hidden text-white py-20 px-4">
+        <!-- Real Photo Background: Vista Cielo Puente Bernardo -->
         <div class="absolute inset-0 z-0">
-          <img src="assets/Visuales/Vista Cielo Puente bernardo.jpeg" alt="Vista aérea Puente Bernardo Arango" class="w-full h-full object-cover object-center">
+          <img src="assets/Visuales/Vista Cielo Puente bernardo.jpeg" alt="Vista aérea del Puente Bernardo Arango, La Virginia" class="w-full h-full object-cover object-center">
         </div>
-        <!-- Overlay para legibilidad del texto -->
-        <div class="absolute inset-0 z-0 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-slate-950/40"></div>
+        <!-- Overlay clásico con gradiente sepia/oscuro -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-stone-950/75 via-stone-900/55 to-amber-950/80"></div>
+        <!-- Textura de papel sutil -->
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22%3E%3Ccircle cx=%2210%22 cy=%2210%22 r=%221%22 fill=%22%23fff%22 opacity=%220.4%22/%3E%3C/svg%3E')"></div>
 
         <!-- Content -->
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 mb-6 uppercase tracking-wider">
-            📍 Risaralda, Colombia
-          </span>
-          <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-amber-400 via-yellow-200 to-emerald-400 bg-clip-text text-transparent drop-shadow-sm font-heading">
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+          <!-- Ornament decorativo -->
+          <div class="flex items-center justify-center gap-3 mb-6">
+            <div class="h-px w-16 bg-amber-400/60"></div>
+            <span class="text-amber-300 text-xs tracking-[0.35em] uppercase font-sans">📍 Risaralda · Colombia</span>
+            <div class="h-px w-16 bg-amber-400/60"></div>
+          </div>
+
+          <h1 class="text-6xl md:text-8xl font-heading font-bold text-amber-100 drop-shadow-lg mb-3" style="text-shadow: 2px 4px 12px rgba(0,0,0,0.6)">
             La Virginia
           </h1>
-          <p class="text-2xl md:text-3xl font-light text-amber-200 mb-4 tracking-wide">
-            "El Puerto Dulce de Colombia"
+          <p class="text-xl md:text-2xl font-display italic text-amber-300 mb-5 tracking-wide" style="font-family: 'IM Fell English', Georgia, serif">
+            &ldquo;El Puerto Dulce de Colombia&rdquo;
           </p>
-          <p class="text-base md:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Un rincón cálido donde confluyen los ríos Cauca y Risaralda, cuna de pescadores, leyendas ancestrales de Sopinga y la gastronomía más vibrante de la región.
+          <p class="text-sm md:text-base font-sans text-stone-200/90 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Un rincón cálido donde confluyen los ríos Cauca y Risaralda — cuna de pescadores, leyendas ancestrales de Sopinga y la gastronomía más vibrante del Eje Cafetero.
           </p>
-          
+
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a routerLink="/historia" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold rounded-xl shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 hover:-translate-y-0.5 transition duration-300 text-center">
+            <a routerLink="/historia"
+               class="w-full sm:w-auto px-8 py-3.5 bg-amber-700 hover:bg-amber-800 text-amber-50 font-sans font-semibold rounded shadow-lg hover:-translate-y-0.5 transition duration-300 text-center border border-amber-600">
               Descubrir Historia
             </a>
-            <a routerLink="/interactivo" class="w-full sm:w-auto px-8 py-3.5 bg-white/10 hover:bg-white/15 text-white font-medium rounded-xl border border-white/20 backdrop-blur-md hover:-translate-y-0.5 transition duration-300 text-center">
-              Jugar la Trivia
+            <a routerLink="/interactivo"
+               class="w-full sm:w-auto px-8 py-3.5 bg-white/10 hover:bg-white/20 text-amber-100 font-sans font-medium rounded border border-amber-300/30 backdrop-blur-sm hover:-translate-y-0.5 transition duration-300 text-center">
+              Jugar la Trivia ✦
             </a>
           </div>
         </div>
 
         <!-- Wave Divider -->
         <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0]">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[60px] fill-slate-50 dark:fill-slate-950">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,90.3,25.88,173,44.75,263,67.23,321.39,56.44Z"></path>
+          <svg viewBox="0 0 1200 80" preserveAspectRatio="none" class="relative block w-full h-14 fill-amber-50">
+            <path d="M0,40L60,45C120,50,240,60,360,58C480,56,600,42,720,38C840,34,960,40,1080,44C1200,48,1320,50,1380,51L1440,52L1440,80L0,80Z"/>
           </svg>
         </div>
       </section>
 
       <!-- STATS SECTION -->
-      <section class="py-16 px-4 max-w-7xl mx-auto -mt-16 relative z-20">
+      <section class="py-12 px-4 max-w-7xl mx-auto -mt-12 relative z-20">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-xl hover:shadow-2xl transition duration-300">
-            <div class="text-3xl md:text-4xl mb-2">☀️</div>
-            <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Clima Promedio</h3>
-            <p class="text-2xl md:text-3xl font-extrabold text-amber-600 dark:text-amber-400 mt-1 font-heading">27°C</p>
-            <p class="text-xs text-slate-400 mt-1">Cálido y tropical todo el año</p>
+          <div class="bg-white border border-amber-200/60 p-6 rounded shadow-md hover:shadow-lg transition duration-300 text-center">
+            <div class="text-3xl mb-2">☀️</div>
+            <p class="text-xs font-sans font-semibold text-amber-700 uppercase tracking-wider">Clima Promedio</p>
+            <p class="text-2xl md:text-3xl font-heading font-bold text-amber-800 mt-1">27°C</p>
+            <p class="text-xs text-stone-400 font-sans mt-1">Cálido y tropical todo el año</p>
           </div>
-          
-          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-xl hover:shadow-2xl transition duration-300">
-            <div class="text-3xl md:text-4xl mb-2">👥</div>
-            <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Población</h3>
-            <p class="text-2xl md:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1 font-heading">~32,000</p>
-            <p class="text-xs text-slate-400 mt-1">Habitantes amables y alegres</p>
+          <div class="bg-white border border-amber-200/60 p-6 rounded shadow-md hover:shadow-lg transition duration-300 text-center">
+            <div class="text-3xl mb-2">👥</div>
+            <p class="text-xs font-sans font-semibold text-amber-700 uppercase tracking-wider">Población</p>
+            <p class="text-2xl md:text-3xl font-heading font-bold text-green-800 mt-1">~32,000</p>
+            <p class="text-xs text-stone-400 font-sans mt-1">Habitantes amables y alegres</p>
           </div>
-
-          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-xl hover:shadow-2xl transition duration-300">
-            <div class="text-3xl md:text-4xl mb-2">🌊</div>
-            <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Confluencia</h3>
-            <p class="text-xl md:text-2xl font-extrabold text-blue-600 dark:text-blue-400 mt-1 font-heading leading-tight">Cauca y Risaralda</p>
-            <p class="text-xs text-slate-400 mt-1">Dos grandes ríos que se unen</p>
+          <div class="bg-white border border-amber-200/60 p-6 rounded shadow-md hover:shadow-lg transition duration-300 text-center">
+            <div class="text-3xl mb-2">🌊</div>
+            <p class="text-xs font-sans font-semibold text-amber-700 uppercase tracking-wider">Confluencia</p>
+            <p class="text-lg md:text-xl font-heading font-bold text-blue-800 mt-1 leading-tight">Cauca y Risaralda</p>
+            <p class="text-xs text-stone-400 font-sans mt-1">Dos grandes ríos que se unen</p>
           </div>
-
-          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-xl hover:shadow-2xl transition duration-300">
-            <div class="text-3xl md:text-4xl mb-2">🚗</div>
-            <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Distancia</h3>
-            <p class="text-2xl md:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400 mt-1 font-heading">30 km</p>
-            <p class="text-xs text-slate-400 mt-1">Desde la capital, Pereira</p>
+          <div class="bg-white border border-amber-200/60 p-6 rounded shadow-md hover:shadow-lg transition duration-300 text-center">
+            <div class="text-3xl mb-2">🚗</div>
+            <p class="text-xs font-sans font-semibold text-amber-700 uppercase tracking-wider">Distancia</p>
+            <p class="text-2xl md:text-3xl font-heading font-bold text-amber-800 mt-1">30 km</p>
+            <p class="text-xs text-stone-400 font-sans mt-1">Desde la capital, Pereira</p>
           </div>
         </div>
       </section>
 
       <!-- HIGHLIGHTS MODULES -->
       <section class="py-16 px-4 max-w-7xl mx-auto">
+        <!-- Divisor ornamental clásico -->
         <div class="text-center max-w-2xl mx-auto mb-12">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 dark:text-white font-heading">
-            Explora la Riqueza de Nuestro Municipio
+          <p class="text-amber-700 font-sans text-xs font-bold tracking-[0.3em] uppercase mb-3">✦ Nuestro Municipio ✦</p>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-stone-900">
+            Explora la Riqueza del Puerto Dulce
           </h2>
-          <div class="w-16 h-1 bg-gradient-to-r from-amber-500 to-emerald-500 mx-auto mt-4 rounded-full"></div>
-          <p class="text-slate-600 dark:text-slate-400 mt-4">
+          <div class="flex items-center justify-center gap-3 mt-4">
+            <div class="h-px w-20 bg-amber-600/40"></div>
+            <span class="text-amber-600 text-lg">✦</span>
+            <div class="h-px w-20 bg-amber-600/40"></div>
+          </div>
+          <p class="text-stone-500 font-sans mt-4 text-sm leading-relaxed">
             Un recorrido por los rincones que hacen de La Virginia un destino turístico y cultural inolvidable en el departamento de Risaralda.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Card 1 -->
-          <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
-            <div class="relative h-56 bg-emerald-950 overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
-              <img src="assets/Visuales/Atardecer puente bernardo.jpeg" alt="Puente Bernardo Arango al atardecer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
-              <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-amber-500 text-slate-950 text-xs font-bold rounded-full uppercase tracking-wider">Arquitectura</span>
+          <div class="group bg-white border border-amber-100 rounded overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
+            <div class="relative h-52 overflow-hidden">
+              <img src="assets/Visuales/Atardecer puente bernardo.jpeg" alt="Puente Bernardo Arango al atardecer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 z-10 px-2 py-0.5 bg-amber-700 text-amber-50 text-[10px] font-sans font-bold uppercase tracking-wider">Arquitectura</span>
             </div>
-            <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading">Puente Colgante Bernardo Arango</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
-                Construido en 1928, este puente colgante peatonal es el monumento histórico más representativo de la región. Cruza el imponente río Cauca conectando con Caimalito.
+            <div class="p-5 flex-1 flex flex-col border-t-2 border-amber-100">
+              <h3 class="text-lg font-heading font-bold text-stone-900 mb-2">Puente Colgante Bernardo Arango</h3>
+              <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
+                Construido en 1928, este puente colgante peatonal es el monumento histórico más representativo. Cruza el imponente río Cauca conectando con Caimalito.
               </p>
-              <a routerLink="/historia" class="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition duration-200">
-                Ver más detalles <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
-              </a>
+              <a routerLink="/historia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver historia &rarr;</a>
             </div>
           </div>
 
           <!-- Card 2 -->
-          <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
-            <div class="relative h-56 bg-amber-950 overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
-              <img src="assets/images/pescado.jpg" alt="Viudo de Pescado" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80'">
-              <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-emerald-600 text-white text-xs font-bold rounded-full uppercase tracking-wider">Gastronomía</span>
+          <div class="group bg-white border border-amber-100 rounded overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
+            <div class="relative h-52 overflow-hidden">
+              <img src="assets/gastronomia/viudo_de_pescado_.jpg" alt="Viudo de Pescado" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 z-10 px-2 py-0.5 bg-green-800 text-green-50 text-[10px] font-sans font-bold uppercase tracking-wider">Gastronomía</span>
             </div>
-            <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading">La Ruta del Pescado</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
-                La Virginia deleita los paladares de sus visitantes con el delicioso "Viudo de Pescado". La tradición culinaria ribereña ofrece platos frescos y llenos de sabor autóctono.
+            <div class="p-5 flex-1 flex flex-col border-t-2 border-amber-100">
+              <h3 class="text-lg font-heading font-bold text-stone-900 mb-2">La Ruta del Pescado</h3>
+              <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
+                La Virginia deleita los paladares con el delicioso Viudo de Pescado. La tradición culinaria ribereña ofrece platos frescos y llenos de sabor autóctono.
               </p>
-              <a routerLink="/gastronomia" class="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition duration-200">
-                Ver delicias <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
-              </a>
+              <a routerLink="/gastronomia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver delicias &rarr;</a>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
-            <div class="relative h-56 bg-sky-950 overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
-              <img src="assets/Visuales/Rio cauca atardecer.jpeg" alt="Río Cauca al atardecer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
-              <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">Naturaleza</span>
+          <div class="group bg-white border border-amber-100 rounded overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
+            <div class="relative h-52 overflow-hidden">
+              <img src="assets/Visuales/Rio cauca atardecer.jpeg" alt="Río Cauca al atardecer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 z-10 px-2 py-0.5 bg-blue-800 text-blue-50 text-[10px] font-sans font-bold uppercase tracking-wider">Naturaleza</span>
             </div>
-            <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading">Distrito Natural El Guásimo</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
-                Una reserva forestal protegida del bosque seco tropical. El lugar ideal para el senderismo ecológico, avistamiento de aves coloridas y contacto directo con la naturaleza.
+            <div class="p-5 flex-1 flex flex-col border-t-2 border-amber-100">
+              <h3 class="text-lg font-heading font-bold text-stone-900 mb-2">Distrito Natural El Guásimo</h3>
+              <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
+                Reserva forestal del bosque seco tropical — ideal para el senderismo ecológico, avistamiento de aves y contacto directo con la naturaleza exuberante.
               </p>
-              <a routerLink="/ubicacion" class="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition duration-200">
-                Ver mapa y rutas <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
-              </a>
+              <a routerLink="/ubicacion" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver mapa &rarr;</a>
             </div>
           </div>
         </div>
 
-        <!-- Segunda fila: 3 cards adicionales con imágenes reales -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          <!-- Card 4 - Patrimonio Cultural -->
-          <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
-            <div class="relative h-56 bg-yellow-950 overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
-              <img src="assets/Visuales/Estatua Caballero gaucho.jpeg" alt="Estatua Caballero Gaucho" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
-              <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-yellow-500 text-slate-950 text-xs font-bold rounded-full uppercase tracking-wider">Patrimonio</span>
+        <!-- Segunda fila -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          <div class="group bg-white border border-amber-100 rounded overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
+            <div class="relative h-52 overflow-hidden">
+              <img src="assets/Visuales/Estatua Caballero gaucho.jpeg" alt="Estatua Caballero Gaucho" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 z-10 px-2 py-0.5 bg-yellow-700 text-yellow-50 text-[10px] font-sans font-bold uppercase tracking-wider">Patrimonio</span>
             </div>
-            <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading">El Caballero Gaucho</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
-                Monumento símbolo de la identidad virgeniana, que rinde homenaje al espíritu libre y trabajador de su gente. Punto de encuentro y orgullo ciudadano.
+            <div class="p-5 flex-1 flex flex-col border-t-2 border-amber-100">
+              <h3 class="text-lg font-heading font-bold text-stone-900 mb-2">El Caballero Gaucho</h3>
+              <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
+                Monumento símbolo de la identidad virgeniana. Rinde homenaje al espíritu libre y trabajador de su gente — punto de encuentro y orgullo ciudadano.
               </p>
-              <a routerLink="/historia" class="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition duration-200">
-                Conocer la historia <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
-              </a>
+              <a routerLink="/historia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Conocer la historia &rarr;</a>
             </div>
           </div>
 
-          <!-- Card 5 - Fe y Tradición -->
-          <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
-            <div class="relative h-56 bg-indigo-950 overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
-              <img src="assets/Visuales/Iglesia La Capilla.jpeg" alt="Iglesia La Capilla" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
-              <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-indigo-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">Fe y Tradición</span>
+          <div class="group bg-white border border-amber-100 rounded overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
+            <div class="relative h-52 overflow-hidden">
+              <img src="assets/Visuales/Iglesia La Capilla.jpeg" alt="Iglesia La Capilla" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 z-10 px-2 py-0.5 bg-indigo-800 text-indigo-50 text-[10px] font-sans font-bold uppercase tracking-wider">Fe y Tradición</span>
             </div>
-            <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading">La Capilla</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
-                Joya arquitectónica religiosa del municipio. La capilla es testigo silencioso de generaciones de fe, bautismos y celebraciones que forman el alma espiritual de La Virginia.
+            <div class="p-5 flex-1 flex flex-col border-t-2 border-amber-100">
+              <h3 class="text-lg font-heading font-bold text-stone-900 mb-2">La Capilla</h3>
+              <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
+                Joya arquitectónica religiosa del municipio. Testigo silencioso de generaciones de fe, bautismos y celebraciones que forman el alma espiritual de La Virginia.
               </p>
-              <a routerLink="/historia" class="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition duration-200">
-                Ver historia religiosa <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
-              </a>
+              <a routerLink="/historia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Ver historia religiosa &rarr;</a>
             </div>
           </div>
 
-          <!-- Card 6 - Memoria Histórica -->
-          <div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800/50 transition duration-300 flex flex-col h-full">
-            <div class="relative h-56 bg-stone-950 overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 opacity-70"></div>
-              <img src="assets/Visuales/Cementerio.jpeg" alt="Cementerio de La Virginia" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
-              <span class="absolute top-4 left-4 z-20 px-3 py-1 bg-stone-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">Memoria Viva</span>
+          <div class="group bg-white border border-amber-100 rounded overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
+            <div class="relative h-52 overflow-hidden">
+              <img src="assets/Visuales/Cementerio.jpeg" alt="Cementerio de La Virginia" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 z-10 px-2 py-0.5 bg-stone-700 text-stone-50 text-[10px] font-sans font-bold uppercase tracking-wider">Memoria Viva</span>
             </div>
-            <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading">Cementerio Municipal</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
-                Un espacio de historia, arte funerario y memoria colectiva. Sus tumbas guardan las historias de familias fundadoras y personajes que construyeron la identidad municipal.
+            <div class="p-5 flex-1 flex flex-col border-t-2 border-amber-100">
+              <h3 class="text-lg font-heading font-bold text-stone-900 mb-2">Cementerio Municipal</h3>
+              <p class="text-stone-500 font-sans text-sm mb-4 leading-relaxed flex-1">
+                Arte funerario y memoria colectiva. Sus tumbas guardan las historias de familias fundadoras y personajes que construyeron la identidad del municipio.
               </p>
-              <a routerLink="/historia" class="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition duration-200">
-                Explorar raíces <span class="ml-1 group-hover:translate-x-1 transition duration-200">&rarr;</span>
-              </a>
+              <a routerLink="/historia" class="text-xs font-sans font-semibold text-amber-700 hover:text-amber-900 transition">Explorar raíces &rarr;</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- BANNER FOTOGRÁFICO - Letrero La Virginia -->
-      <section class="relative h-48 md:h-64 overflow-hidden my-4">
+      <section class="relative h-44 md:h-56 overflow-hidden my-6">
         <img src="assets/Visuales/Letrero La Virginia.jpeg" alt="Letrero de bienvenida La Virginia" class="w-full h-full object-cover object-center">
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-transparent to-slate-950/70 flex items-center justify-center">
-          <p class="text-white text-2xl md:text-4xl font-extrabold tracking-widest drop-shadow-lg font-heading text-center px-4">
-            BIENVENIDO A LA VIRGINIA, RISARALDA
+        <div class="absolute inset-0 bg-stone-950/60 flex items-center justify-center">
+          <p class="text-amber-200 text-2xl md:text-4xl font-heading font-bold tracking-widest drop-shadow-lg text-center px-4" style="text-shadow: 1px 2px 8px rgba(0,0,0,0.7)">
+            Bienvenido a La Virginia, Risaralda
           </p>
         </div>
       </section>
 
-      <!-- VIDEO PROMO SECTION -->
-      <section class="py-16 relative border-y border-slate-200/50 dark:border-slate-800/40 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-          <img src="assets/Visuales/Puente fransisco.jpeg" alt="Puente Francisco" class="w-full h-full object-cover object-center opacity-15 dark:opacity-10">
-        </div>
-        <div class="absolute inset-0 z-0 bg-slate-100/90 dark:bg-slate-900/90"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div class="lg:col-span-5">
-              <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block mb-3">
-                Video Documental
-              </span>
-              <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 dark:text-white mb-6 font-heading leading-tight">
-                Siente el Calor de Nuestra Tierra Fluvial
-              </h2>
-              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                Descubre en este documental el alma de La Virginia: sus pescadores artesanales navegando las aguas del río Cauca, su herencia histórica afrodescendiente en Sopinga y la calidez humana de su gente que acoge a cada visitante con los brazos abiertos.
+      <!-- VIDEO DOCUMENTAL SECTION -->
+      <section class="py-16 bg-amber-50 border-y border-amber-200/60">
+        <div class="max-w-7xl mx-auto px-4">
+          <!-- Encabezado clásico -->
+          <div class="text-center mb-10">
+            <p class="text-amber-700 font-sans text-xs font-bold tracking-[0.3em] uppercase mb-2">✦ Audiovisual ✦</p>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-stone-900">Documental del Puerto Dulce</h2>
+            <div class="flex items-center justify-center gap-3 mt-3">
+              <div class="h-px w-16 bg-amber-600/40"></div>
+              <span class="text-amber-600">✦</span>
+              <div class="h-px w-16 bg-amber-600/40"></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-5 space-y-5">
+              <p class="text-stone-600 font-sans text-sm leading-relaxed">
+                Descubre en este documental el alma de La Virginia: sus pescadores artesanales navegando las aguas del río Cauca, la herencia histórica de Sopinga y la calidez humana de su gente que acoge a cada visitante con los brazos abiertos.
               </p>
-              
-              <div class="space-y-4">
+              <div class="space-y-3">
                 <div class="flex items-start gap-3">
-                  <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-sm">✓</div>
+                  <span class="text-amber-700 font-bold mt-0.5">✦</span>
                   <div>
-                    <h4 class="font-bold text-slate-900 dark:text-white text-sm">Historia viva</h4>
-                    <p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">El paso del desarrollo fluvial del eje cafetero.</p>
+                    <h4 class="font-heading font-semibold text-stone-800 text-sm">Historia Viva</h4>
+                    <p class="text-stone-500 font-sans text-xs mt-0.5">El desarrollo fluvial del Eje Cafetero contado desde sus orillas.</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-sm">✓</div>
+                  <span class="text-amber-700 font-bold mt-0.5">✦</span>
                   <div>
-                    <h4 class="font-bold text-slate-900 dark:text-white text-sm">Tradición pesquera</h4>
-                    <p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">La magia del río Cauca y sus lancheros tradicionales.</p>
+                    <h4 class="font-heading font-semibold text-stone-800 text-sm">Tradición Pesquera</h4>
+                    <p class="text-stone-500 font-sans text-xs mt-0.5">La magia del río Cauca y los lancheros que lo habitan.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-amber-700 font-bold mt-0.5">✦</span>
+                  <div>
+                    <h4 class="font-heading font-semibold text-stone-800 text-sm">Identidad Cultural</h4>
+                    <p class="text-stone-500 font-sans text-xs mt-0.5">Personajes, mitos y memorias que forjan el alma virgeniana.</p>
                   </div>
                 </div>
               </div>
+              <a routerLink="/territorio" class="inline-block mt-2 px-5 py-2.5 bg-amber-700 hover:bg-amber-800 text-amber-50 font-sans text-sm font-semibold rounded shadow transition">
+                Ver Proyecto Territorio
+              </a>
             </div>
 
-            <!-- YouTube Video Embed -->
+            <!-- YouTube Video Embed (documental real) -->
             <div class="lg:col-span-7">
-              <div class="relative bg-slate-950 p-3 rounded-2xl shadow-2xl border border-slate-200/50 dark:border-slate-800/50 overflow-hidden">
-                <div class="aspect-video w-full rounded-lg overflow-hidden">
-                  <iframe 
-                    [src]="videoUrl" 
-                    title="Video Promocional La Virginia" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              <div class="border-4 border-amber-200 shadow-xl rounded overflow-hidden">
+                <div class="aspect-video w-full">
+                  <iframe
+                    [src]="videoUrl"
+                    title="Documental La Virginia Risaralda"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                     class="w-full h-full">
                   </iframe>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- CALL TO ACTION -->
-      <section class="py-20 px-4 text-center max-w-4xl mx-auto">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-950 dark:text-white mb-6 font-heading">
-          ¿Listo para conocer el Puerto Dulce?
-        </h2>
-        <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Ven y recorre sus calles soleadas, cruza el puente histórico y disfruta de un delicioso pescado frito a la orilla del río. ¡La Virginia te espera con sus atardeceres mágicos!
-        </p>
-        <div class="flex flex-wrap gap-4 justify-center">
-          <a routerLink="/ubicacion" class="px-8 py-3.5 bg-gradient-to-r from-emerald-600 to-green-500 hover:from-emerald-700 hover:to-green-600 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/20 transition duration-300">
-            Ver Ubicación y Mapa
-          </a>
-          <a routerLink="/galeria" class="px-8 py-3.5 bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-semibold rounded-xl transition duration-300">
-            Galería Fotográfica
-          </a>
+      <!-- CALL TO ACTION clásico -->
+      <section class="py-16 px-4 bg-amber-900 text-amber-100 text-center">
+        <div class="max-w-3xl mx-auto">
+          <p class="font-sans text-xs text-amber-400 tracking-[0.3em] uppercase mb-3">✦ Visítanos ✦</p>
+          <h2 class="text-3xl md:text-5xl font-heading font-bold text-amber-50 mb-5">
+            ¿Listo para conocer el Puerto Dulce?
+          </h2>
+          <p class="font-sans text-amber-200/80 mb-8 leading-relaxed text-sm md:text-base">
+            Ven y recorre sus calles soleadas, cruza el puente histórico y disfruta de un delicioso pescado frito a la orilla del río. ¡La Virginia te espera con sus atardeceres mágicos!
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a routerLink="/ubicacion" class="px-8 py-3 bg-amber-50 hover:bg-white text-amber-900 font-sans font-bold rounded shadow transition">
+              Ver Ubicación y Mapa
+            </a>
+            <a routerLink="/galeria" class="px-8 py-3 border border-amber-300/40 hover:bg-amber-800 text-amber-100 font-sans font-semibold rounded transition">
+              Galería Fotográfica
+            </a>
+          </div>
         </div>
       </section>
     </div>
@@ -318,7 +319,8 @@ export class InicioComponent implements OnInit {
     // Let's use a nice, real promotional video for Risaralda/La Virginia
     // Video ID 'N65nQZ4YvYc' or similar travel documentary about La Virginia.
     // YouTube embed requires 'https://www.youtube.com/embed/<video-id>'
-    const youtubeId = 'N65nQZ4YvYc'; 
-    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${youtubeId}`);
+    // Documental real del municipio de La Virginia, Risaralda
+    const youtubeId = 'H_itndvSb1k';
+    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${youtubeId}?rel=0&showinfo=0`);
   }
 }

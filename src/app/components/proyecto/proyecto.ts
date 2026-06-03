@@ -16,6 +16,7 @@ interface Soundscape {
   title: string;
   description: string;
   duration: string;
+  text: string;
 }
 
 @Component({
@@ -194,33 +195,38 @@ interface Soundscape {
 
             <!-- Soundscape list -->
             <div class="space-y-3">
-              <div *ngFor="let track of tracks" 
-                   (click)="playTrack(track.id)"
+              <div *ngFor="let track of tracks"
+                   (click)="playTrack(track.id, track.text)"
                    class="p-3 rounded-xl border transition duration-200 cursor-pointer flex justify-between items-center"
-                   [ngClass]="activeTrackId === track.id 
-                     ? 'bg-blue-500/5 border-blue-500 text-blue-900 dark:text-blue-300' 
-                     : 'bg-slate-50 dark:bg-slate-950 border-slate-150 dark:border-slate-850 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200'">
+                   [ngClass]="activeTrackId === track.id
+                     ? 'bg-blue-500/5 border-blue-500 text-blue-900'
+                     : 'bg-slate-50 border-stone-200 hover:bg-amber-50 text-stone-800'">
                 <div class="flex items-center gap-3">
-                  <span class="text-sm">{{ activeTrackId === track.id && isTrackPlaying ? '⏸️' : '🎵' }}</span>
+                  <span class="text-sm">{{ activeTrackId === track.id && isTrackPlaying ? '⏸️' : '🔊' }}</span>
                   <div>
-                    <h4 class="text-xs font-bold leading-tight">{{ track.title }}</h4>
-                    <p class="text-[9px] text-slate-450 mt-0.5">{{ track.description }}</p>
+                    <h4 class="text-xs font-bold leading-tight font-sans">{{ track.title }}</h4>
+                    <p class="text-[9px] text-stone-400 mt-0.5 font-sans">{{ track.description }}</p>
                   </div>
                 </div>
-                <span class="text-[10px] font-mono text-slate-400">{{ track.duration }}</span>
+                <span class="text-[10px] font-mono text-stone-400">Narrar</span>
               </div>
+              <!-- Stop button -->
+              <button *ngIf="isTrackPlaying" (click)="stopSpeech()"
+                      class="w-full mt-2 py-2 rounded-lg bg-red-100 hover:bg-red-200 text-red-700 text-xs font-sans font-bold transition">
+                ⏹ Detener Narración
+              </button>
             </div>
           </div>
 
-          <!-- Simulated Waveform if playing -->
+          <!-- Animated Waveform -->
           <div class="mt-6 flex flex-col gap-2">
             <div class="flex gap-0.5 justify-center items-end h-8">
-              <div *ngFor="let bar of soundBars" 
+              <div *ngFor="let bar of soundBars"
                    class="w-1 bg-blue-500 rounded-full transition-all duration-200"
                    [style.height.px]="isTrackPlaying ? bar : 3"></div>
             </div>
-            <p class="text-[9px] text-slate-400 text-center font-bold uppercase tracking-widest mt-1">
-              {{ isTrackPlaying ? 'Reproduciendo Paisaje Sonoro Local...' : 'Selecciona un ambiente para reproducir' }}
+            <p class="text-[9px] text-stone-400 text-center font-sans font-bold uppercase tracking-widest mt-1">
+              {{ isTrackPlaying ? 'Narrando con voz de Microsoft en Español...' : 'Selecciona un relato para escuchar' }}
             </p>
           </div>
         </div>
@@ -362,43 +368,120 @@ export class ProyectoComponent implements OnInit {
   protected tracks: Soundscape[] = [
     {
       id: 1,
-      title: 'Murmullo de la Confluencia (Río Cauca)',
-      description: 'Grabación ambiental del encuentro de los ríos al amanecer, con cantos de aves.',
-      duration: '3:12'
+      title: 'Microrrelato: Doña Miriam',
+      description: 'La Memoria Viva de San Cayetano — click para narrar',
+      duration: '~2 min',
+      text: 'Doña Miriam se considera como una fundadora del barrio San Cayetano. Nos contó que fue estudiante del colegio de monjas, viviendo en una casa que anteriormente era de bareque con una trocha como carretera. Miriam también nos habló sobre el mito de un pez dorado que muchos pescadores llegaron a ver en el río Cauca; aparte, nos habló sobre la señora María Isabel, perteneciente de un gran terreno de parte del barrio San Cayetano a quien incluso veían en caballo, y considera que frenó el desarrollo del pueblo al negarse a entregar sus tierras. Por último, nos compartió recuerdos del Caballero Gaucho, a quien describió como un hombre reservado y sin problemas. La venta de su casa tras su muerte y la colocación de su estatua siguen causando algo de nostalgia e intriga en la comunidad.'
     },
     {
       id: 2,
-      title: 'Tránsito Peatonal sobre el Puente Bernardo Arango',
-      description: 'Sonido de pasos, viento y el eco del agua fluyendo debajo de la estructura metálica.',
-      duration: '2:45'
+      title: 'Microrrelato: El Rolo',
+      description: 'Apariencia Urbana y Seguridad — click para narrar',
+      duration: '~1.5 min',
+      text: 'El Rolo, un habitante y trabajador local, nos brindó su perspectiva sobre la seguridad del entorno. Nos desmitió el aspecto sobre zonas de riesgo, dándonos a entender que algunos sectores tienen una estética urbana y desgastada, pero que solamente se queda en esa feíta apariencia. Algo que nos expresó con firmeza es que el problema más grave no es el microtráfico ni las bandas criminales, sino la preocupante falta de civismo vial, refiriéndose a que los vehículos no respetan al peatón y que las motos circulando a altas horas de la noche generan peligro de accidentes. Con respecto a la policía local, califica su labor como buena y concluye: como uno no anda en malos cuentos, pues uno no tiene problema con ellos.'
     },
     {
       id: 3,
-      title: 'Domingo en el Parque de las Iguanas',
-      description: 'Murmullo urbano, campanas de la parroquia y ambiente festivo familiar.',
-      duration: '4:20'
+      title: 'Microrrelato: Hernán',
+      description: 'La Noche del Puente Mocatán — click para narrar',
+      duration: '~1 min',
+      text: 'Ocurrió una noche mientras trabajaba como guachimán en unos cultivos de maíz, justo al otro lado del puente Mocatán, donde pasa el río Risaralda. Salió un momento al río a recoger agua y, cuando iba de regreso, vio aparecer en el puente una silueta con un sombrero grandísimo. El personaje era alto como un poste; pasó exactamente frente a la entrada para Portobelo y siguió de largo hacia el ingenio. En el momento no se asustó, se le quedó mirando fijo para entender qué era eso, preguntándose: ¿Y esto qué es? El susto de verdad le dio después, cuando ya había pasado. Por fortuna no lo agredió ni le hizo nada; simplemente se esfumó en la noche.'
+    },
+    {
+      id: 4,
+      title: 'Microrrelato: Juan Manuel Guerrero',
+      description: 'Resiliencia desde la Orilla del Cauca — click para narrar',
+      duration: '~2 min',
+      text: 'Juan Manuel Guerrero es un habitante de 37 años de La Virginia que permitió conocer un poco sobre su realidad cruda, que incluso marca la historia del municipio cerca del Río Cauca. Con honestidad, recuerda cómo su infancia fue marcada por la violencia, cuando tuvieron que ayudar a muchas familias a rescatar del río los cuerpos de sus seres queridos que bajaban flotando desde el Valle. También menciona mitos como el pez capaz de hundir botes y cómo la falta de empleo en la región impulsó la motivación de muchos jóvenes, incluido él, hacia bandas criminales. A día de hoy Juan Manuel es una persona dedicada a la pesca regular, alejado de ese camino, inspirando con su resiliencia a trabajar a pesar del alto costo de la vida.'
     }
   ];
 
   ngOnInit(): void {}
 
-  protected playTrack(id: number): void {
-    if (this.activeTrackId === id) {
-      this.isTrackPlaying = !this.isTrackPlaying;
-    } else {
-      this.activeTrackId = id;
-      this.isTrackPlaying = true;
+  protected playTrack(id: number, text: string): void {
+    // Stop any ongoing speech
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
     }
 
-    if (this.isTrackPlaying) {
-      if (this.soundIntervalId) clearInterval(this.soundIntervalId);
-      this.soundIntervalId = setInterval(() => {
-        this.soundBars = this.soundBars.map(() => Math.floor(Math.random() * 24) + 4);
-      }, 150);
-    } else {
+    if (this.activeTrackId === id && this.isTrackPlaying) {
+      // Toggle off
+      this.isTrackPlaying = false;
+      this.activeTrackId = null;
       if (this.soundIntervalId) clearInterval(this.soundIntervalId);
       this.soundBars = Array(20).fill(3);
+      return;
     }
+
+    this.activeTrackId = id;
+    this.isTrackPlaying = true;
+
+    // Start waveform animation
+    if (this.soundIntervalId) clearInterval(this.soundIntervalId);
+    this.soundIntervalId = setInterval(() => {
+      this.soundBars = this.soundBars.map(() => Math.floor(Math.random() * 24) + 4);
+    }, 150);
+
+    // Use Web Speech API with Spanish female Microsoft voice
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'es-CO'; // Colombian Spanish
+      utterance.rate = 0.88;
+      utterance.pitch = 1.05;
+
+      // Try to get Microsoft female voice in Spanish
+      const trySpeak = () => {
+        const voices = window.speechSynthesis.getVoices();
+        // Priority order: Microsoft female Spanish voices
+        const preferred = [
+          'Microsoft Sabina Desktop - Spanish (Mexico)',
+          'Microsoft Helena Desktop - Spanish (Spain)',
+          'Microsoft Laura Desktop - Spanish (Spain)',
+          'Microsoft Paloma Desktop - Spanish (United States)',
+          'Microsoft Maria Desktop - Spanish (Spain)',
+          'Microsoft Raquel Online (Natural) - Spanish (Spain)',
+          'Microsoft Dalia Online (Natural) - Spanish (Mexico)',
+          'Microsoft Renata Online (Natural) - Spanish (Colombia)',
+        ];
+        let selectedVoice: SpeechSynthesisVoice | undefined;
+        for (const name of preferred) {
+          selectedVoice = voices.find(v => v.name === name);
+          if (selectedVoice) break;
+        }
+        // Fallback: any female Spanish voice
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => v.lang.startsWith('es') && (v.name.toLowerCase().includes('female') || v.name.includes('Helena') || v.name.includes('Laura') || v.name.includes('Dalia') || v.name.includes('Sabina') || v.name.includes('Paloma') || v.name.includes('Maria')));
+        }
+        // Fallback: any Spanish voice
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => v.lang.startsWith('es'));
+        }
+        if (selectedVoice) utterance.voice = selectedVoice;
+
+        utterance.onend = () => {
+          this.isTrackPlaying = false;
+          this.activeTrackId = null;
+          if (this.soundIntervalId) clearInterval(this.soundIntervalId);
+          this.soundBars = Array(20).fill(3);
+        };
+        window.speechSynthesis.speak(utterance);
+      };
+
+      // Voices may not be loaded yet on first call
+      if (window.speechSynthesis.getVoices().length === 0) {
+        window.speechSynthesis.addEventListener('voiceschanged', trySpeak, { once: true });
+      } else {
+        trySpeak();
+      }
+    }
+  }
+
+  protected stopSpeech(): void {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    this.isTrackPlaying = false;
+    this.activeTrackId = null;
+    if (this.soundIntervalId) clearInterval(this.soundIntervalId);
+    this.soundBars = Array(20).fill(3);
   }
 
   protected handleImageError(event: any, index: number): void {

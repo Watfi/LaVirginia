@@ -1,206 +1,130 @@
-<!-- Sticky Navigation Header -->
-<header class="sticky top-0 z-40 w-full border-b border-slate-200/55 dark:border-slate-800/40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-    
-    <!-- Brand Logo (Sun & Rivers SVG) -->
+<!-- Sticky Navigation Header — estilo clásico cultural -->
+<header class="sticky top-0 z-40 w-full border-b-2 border-amber-700/30 bg-amber-50/95 backdrop-blur-sm shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between py-3">
+
+    <!-- Logo + Nombre -->
     <a routerLink="/inicio" (click)="closeMobileMenu()" class="flex items-center gap-3 group">
-      <div class="w-11 h-11 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition duration-300 bg-white flex items-center justify-center">
-        <img src="assets/Escudo_de_La_Virginia.svg.png" alt="Escudo de La Virginia" class="w-full h-full object-contain p-0.5">
+      <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-700/40 shadow group-hover:border-amber-700 transition duration-300">
+        <img src="assets/Escudo_de_La_Virginia.svg.png" alt="Escudo de La Virginia" class="w-full h-full object-cover" onerror="this.style.display='none'">
       </div>
       <div>
-        <span class="block font-heading text-lg font-black tracking-tight text-slate-900 dark:text-white leading-none">
-          LA VIRGINIA
-        </span>
-        <span class="block text-[10px] font-bold tracking-widest text-emerald-650 dark:text-emerald-400 uppercase mt-0.5">
-          Puerto Dulce
-        </span>
+        <span class="block font-heading text-xl font-bold tracking-wide text-amber-900 leading-none">La Virginia</span>
+        <span class="block text-[10px] font-medium tracking-[0.2em] text-amber-700/80 uppercase mt-0.5 font-sans">Puerto Dulce · Risaralda</span>
       </div>
     </a>
 
-    <!-- Desktop Navigation Links -->
-    <nav class="hidden lg:flex items-center gap-1">
-      <a routerLink="/inicio" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold" [routerLinkActiveOptions]="{exact: true}"
-         class="px-4 py-2 rounded-xl text-sm font-medium text-slate-650 hover:text-slate-900 dark:text-slate-350 dark:hover:text-white transition duration-200">
-        Inicio
-      </a>
-      <a routerLink="/historia" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold"
-         class="px-4 py-2 rounded-xl text-sm font-medium text-slate-650 hover:text-slate-900 dark:text-slate-350 dark:hover:text-white transition duration-200">
-        Historia
-      </a>
-      <a routerLink="/gastronomia" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold"
-         class="px-4 py-2 rounded-xl text-sm font-medium text-slate-650 hover:text-slate-900 dark:text-slate-350 dark:hover:text-white transition duration-200">
-        Gastronomía
-      </a>
-      <a routerLink="/ubicacion" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold"
-         class="px-4 py-2 rounded-xl text-sm font-medium text-slate-650 hover:text-slate-900 dark:text-slate-350 dark:hover:text-white transition duration-200">
-        Ubicación
-      </a>
-      <a routerLink="/territorio" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold"
-         class="px-4 py-2 rounded-xl text-sm font-medium text-slate-650 hover:text-slate-900 dark:text-slate-350 dark:hover:text-white transition duration-200">
-        Territorio
-      </a>
-      <a routerLink="/galeria" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold"
-         class="px-4 py-2 rounded-xl text-sm font-medium text-slate-650 hover:text-slate-900 dark:text-slate-350 dark:hover:text-white transition duration-200">
-        Galería
-      </a>
-      <a routerLink="/interactivo" routerLinkActive="bg-emerald-650 dark:bg-emerald-650 text-white font-semibold shadow-md shadow-emerald-500/10"
-         class="px-4 py-2 rounded-xl text-sm font-medium text-slate-650 hover:text-slate-900 dark:text-slate-350 dark:hover:text-white hover:bg-slate-55 transition duration-200">
-        Trivia Interactiva
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-0.5">
+      <a routerLink="/inicio"      routerLinkActive="bg-amber-100 text-amber-900 font-semibold" [routerLinkActiveOptions]="{exact:true}"
+         class="px-3 py-2 rounded text-sm font-sans text-stone-600 hover:text-amber-900 hover:bg-amber-100/70 transition duration-200">Inicio</a>
+      <a routerLink="/historia"    routerLinkActive="bg-amber-100 text-amber-900 font-semibold"
+         class="px-3 py-2 rounded text-sm font-sans text-stone-600 hover:text-amber-900 hover:bg-amber-100/70 transition duration-200">Historia</a>
+      <a routerLink="/gastronomia" routerLinkActive="bg-amber-100 text-amber-900 font-semibold"
+         class="px-3 py-2 rounded text-sm font-sans text-stone-600 hover:text-amber-900 hover:bg-amber-100/70 transition duration-200">Gastronomía</a>
+      <a routerLink="/ubicacion"   routerLinkActive="bg-amber-100 text-amber-900 font-semibold"
+         class="px-3 py-2 rounded text-sm font-sans text-stone-600 hover:text-amber-900 hover:bg-amber-100/70 transition duration-200">Ubicación</a>
+      <a routerLink="/territorio"  routerLinkActive="bg-amber-100 text-amber-900 font-semibold"
+         class="px-3 py-2 rounded text-sm font-sans text-stone-600 hover:text-amber-900 hover:bg-amber-100/70 transition duration-200">Territorio</a>
+      <a routerLink="/galeria"     routerLinkActive="bg-amber-100 text-amber-900 font-semibold"
+         class="px-3 py-2 rounded text-sm font-sans text-stone-600 hover:text-amber-900 hover:bg-amber-100/70 transition duration-200">Galería</a>
+      <a routerLink="/interactivo"
+         class="ml-2 px-4 py-2 bg-amber-700 hover:bg-amber-800 text-amber-50 text-sm font-sans font-semibold rounded shadow-sm transition duration-200">
+        Trivia ✦
       </a>
     </nav>
 
-    <!-- Real-time clock widget (Desktop) -->
-    <div class="hidden lg:flex items-center gap-2 bg-slate-100/80 dark:bg-slate-950/80 border border-slate-200/50 dark:border-slate-800/50 px-3.5 py-1.5 rounded-xl shadow-inner text-xs font-semibold text-slate-600 dark:text-slate-400 select-none">
-      <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-ping mr-1"></span>
+    <!-- Reloj (Desktop) -->
+    <div class="hidden lg:flex items-center gap-2 bg-amber-100 border border-amber-300/60 px-3 py-1.5 rounded text-xs font-sans text-amber-800 select-none">
+      <span class="inline-block w-1.5 h-1.5 rounded-full bg-green-600 animate-pulse"></span>
       <span>{{ liveDateTime }}</span>
     </div>
 
-    <!-- Mobile Menu Button (Hamburger) -->
-    <div class="flex items-center gap-3 lg:hidden">
-      <!-- Mobile clock display briefly -->
-      <span class="text-[10px] font-bold bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded text-slate-500">{{ currentTime() | date:'hh:mm a' }}</span>
-      
-      <button (click)="toggleMobileMenu()" 
-              class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-850 hover:bg-slate-200/80 dark:hover:bg-slate-800 flex items-center justify-center border border-slate-200/50 dark:border-slate-800/40 text-slate-700 dark:text-white transition focus:outline-none"
-              aria-label="Abrir Menú">
-        <svg *ngIf="!isMobileMenuOpen()" class="w-6 h-6 fill-none stroke-current stroke-2" stroke-linecap="round" viewBox="0 0 24 24">
-          <line x1="4" y1="6" x2="20" y2="6"></line>
-          <line x1="4" y1="12" x2="20" y2="12"></line>
-          <line x1="4" y1="18" x2="20" y2="18"></line>
+    <!-- Hamburger -->
+    <div class="flex items-center gap-2 lg:hidden">
+      <span class="text-[10px] font-sans font-medium bg-amber-100 border border-amber-300/50 px-2 py-1 rounded text-amber-700">{{ currentTime() | date:'hh:mm a' }}</span>
+      <button (click)="toggleMobileMenu()" class="w-10 h-10 rounded bg-amber-100 hover:bg-amber-200 flex items-center justify-center border border-amber-300/50 text-amber-800 transition focus:outline-none" aria-label="Abrir Menú">
+        <svg *ngIf="!isMobileMenuOpen()" class="w-5 h-5 fill-none stroke-current stroke-2" stroke-linecap="round" viewBox="0 0 24 24">
+          <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/>
         </svg>
-        <svg *ngIf="isMobileMenuOpen()" class="w-6 h-6 fill-none stroke-current stroke-2" stroke-linecap="round" viewBox="0 0 24 24">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
+        <svg *ngIf="isMobileMenuOpen()" class="w-5 h-5 fill-none stroke-current stroke-2" stroke-linecap="round" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
         </svg>
       </button>
     </div>
-
   </div>
 
-  <!-- Mobile Dropdown Navigation Drawer -->
-  <div *ngIf="isMobileMenuOpen()" 
-       class="lg:hidden border-t border-slate-200/50 dark:border-slate-800/40 bg-white dark:bg-slate-900 animate-fade-down shadow-lg">
-    <div class="px-4 py-3 space-y-1.5">
-      <a routerLink="/inicio" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileMenu()"
-         class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300">
-        Inicio
-      </a>
-      <a routerLink="/historia" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold" (click)="closeMobileMenu()"
-         class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300">
-        Historia
-      </a>
-      <a routerLink="/gastronomia" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold" (click)="closeMobileMenu()"
-         class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300">
-        Gastronomía
-      </a>
-      <a routerLink="/ubicacion" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold" (click)="closeMobileMenu()"
-         class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300">
-        Ubicación
-      </a>
-      <a routerLink="/territorio" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold" (click)="closeMobileMenu()"
-         class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300">
-        Territorio
-      </a>
-      <a routerLink="/galeria" routerLinkActive="bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold" (click)="closeMobileMenu()"
-         class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300">
-        Galería
-      </a>
-      <a routerLink="/interactivo" routerLinkActive="bg-emerald-600 text-white font-semibold" (click)="closeMobileMenu()"
-         class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-50">
-        Trivia Interactiva
-      </a>
-      
-      <!-- Clock in drawer for mobile -->
-      <div class="border-t border-slate-150 dark:border-slate-800/80 pt-3 pb-1 text-center text-[10px] text-slate-400 font-medium">
-        <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping mr-1"></span>
-        {{ liveDateTime }}
+  <!-- Mobile Drawer -->
+  <div *ngIf="isMobileMenuOpen()" class="lg:hidden border-t border-amber-200 bg-amber-50 shadow-md animate-fade-down">
+    <div class="px-4 py-3 space-y-1">
+      <a routerLink="/inicio"      routerLinkActive="bg-amber-100 text-amber-900 font-semibold" [routerLinkActiveOptions]="{exact:true}" (click)="closeMobileMenu()" class="block px-3 py-2.5 rounded text-sm font-sans text-stone-700">Inicio</a>
+      <a routerLink="/historia"    routerLinkActive="bg-amber-100 text-amber-900 font-semibold" (click)="closeMobileMenu()" class="block px-3 py-2.5 rounded text-sm font-sans text-stone-700">Historia</a>
+      <a routerLink="/gastronomia" routerLinkActive="bg-amber-100 text-amber-900 font-semibold" (click)="closeMobileMenu()" class="block px-3 py-2.5 rounded text-sm font-sans text-stone-700">Gastronomía</a>
+      <a routerLink="/ubicacion"   routerLinkActive="bg-amber-100 text-amber-900 font-semibold" (click)="closeMobileMenu()" class="block px-3 py-2.5 rounded text-sm font-sans text-stone-700">Ubicación</a>
+      <a routerLink="/territorio"  routerLinkActive="bg-amber-100 text-amber-900 font-semibold" (click)="closeMobileMenu()" class="block px-3 py-2.5 rounded text-sm font-sans text-stone-700">Territorio</a>
+      <a routerLink="/galeria"     routerLinkActive="bg-amber-100 text-amber-900 font-semibold" (click)="closeMobileMenu()" class="block px-3 py-2.5 rounded text-sm font-sans text-stone-700">Galería</a>
+      <a routerLink="/interactivo" (click)="closeMobileMenu()" class="block px-3 py-2.5 rounded text-sm font-sans font-bold text-amber-800">Trivia Interactiva ✦</a>
+      <div class="border-t border-amber-200 pt-2 pb-1 text-center text-[10px] font-sans text-amber-600">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-green-600 animate-pulse mr-1"></span>{{ liveDateTime }}
       </div>
     </div>
   </div>
 </header>
 
-<!-- Main Page Router Container -->
-<main class="min-h-[70vh] relative z-10">
+<!-- Router outlet -->
+<main class="min-h-[70vh]">
   <router-outlet></router-outlet>
 </main>
 
-<!-- Footer with Layered River Wave -->
-<footer class="relative bg-slate-950 text-slate-400 pt-16 pb-12 overflow-hidden border-t border-slate-900">
-  
-  <!-- Wave Graphics (Confluence of Cauca and Risaralda rivers) -->
-  <div class="absolute top-0 left-0 right-0 w-full overflow-hidden leading-[0] z-0">
-    <!-- Back river layer (Sky blue) -->
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="relative block w-[150%] h-[50px] fill-sky-500/10 -translate-x-12">
-      <path d="M0,32L80,48C160,64,320,96,480,90.7C640,85,800,43,960,37.3C1120,32,1280,64,1360,80L1440,96L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
-    </svg>
-    <!-- Front river layer (Deep blue) -->
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="absolute top-0 left-0 w-full h-[60px] fill-slate-950">
-      <path d="M0,64L60,69.3C120,75,240,85,360,80C480,75,600,53,720,48C840,43,960,53,1080,58.7C1200,64,1320,64,1380,64L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path>
+<!-- FOOTER clásico con olas SVG -->
+<footer class="relative bg-amber-900 text-amber-100 pt-20 pb-10 overflow-hidden">
+  <!-- Wave SVG -->
+  <div class="absolute top-0 left-0 right-0 overflow-hidden leading-[0]">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="block w-full h-16 fill-amber-50">
+      <path d="M0,40L60,45C120,50,240,60,360,58C480,56,600,42,720,38C840,34,960,40,1080,44C1200,48,1320,50,1380,51L1440,52L1440,0L0,0Z"/>
     </svg>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-      
-      <!-- Col 1: Brand & Desc -->
-      <div class="space-y-4">
-        <div class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-bold text-xs">
-            LV
-          </div>
-          <span class="font-heading font-black text-lg text-white tracking-tight">LA VIRGINIA</span>
-        </div>
-        <p class="text-xs leading-relaxed text-slate-400">
-          "El Puerto Dulce de Risaralda". Un portal dedicado a exaltar el patrimonio histórico, la cultura fluvial y los sabores típicos de nuestra región.
-        </p>
-      </div>
+    <!-- Escudo centrado -->
+    <div class="flex flex-col items-center mb-10">
+      <img src="assets/Escudo_de_La_Virginia.svg.png" alt="Escudo de La Virginia" class="w-20 h-20 object-contain mb-3 drop-shadow-lg" onerror="this.style.display='none'">
+      <h2 class="text-2xl font-heading font-bold text-amber-200">La Virginia, Risaralda</h2>
+      <p class="text-amber-400/80 text-xs font-sans tracking-widest uppercase mt-1">✦ El Puerto Dulce de Colombia ✦</p>
+    </div>
 
-      <!-- Col 2: Navigation Links -->
-      <div class="space-y-4">
-        <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider">Módulos del Sitio</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a routerLink="/inicio" class="hover:text-amber-400 transition duration-200">Inicio</a></li>
-          <li><a routerLink="/historia" class="hover:text-amber-400 transition duration-200">Historia &amp; Símbolos</a></li>
-          <li><a routerLink="/gastronomia" class="hover:text-amber-400 transition duration-200">Gastronomía y Pescado</a></li>
-          <li><a routerLink="/ubicacion" class="hover:text-amber-400 transition duration-200">Ubicación y Atracciones</a></li>
-          <li><a routerLink="/territorio" class="hover:text-amber-400 transition duration-200">Proyecto Territorio</a></li>
-          <li><a routerLink="/galeria" class="hover:text-amber-400 transition duration-200">Galería de Fotos</a></li>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 border-t border-amber-800/60 pt-10">
+      <div>
+        <h4 class="font-heading text-sm font-bold text-amber-200 uppercase tracking-wider mb-3">Módulos</h4>
+        <ul class="space-y-1.5 text-xs font-sans">
+          <li><a routerLink="/inicio"      class="text-amber-300/80 hover:text-amber-200 transition">Inicio</a></li>
+          <li><a routerLink="/historia"    class="text-amber-300/80 hover:text-amber-200 transition">Historia &amp; Símbolos</a></li>
+          <li><a routerLink="/gastronomia" class="text-amber-300/80 hover:text-amber-200 transition">Gastronomía</a></li>
+          <li><a routerLink="/ubicacion"   class="text-amber-300/80 hover:text-amber-200 transition">Ubicación y Atracciones</a></li>
+          <li><a routerLink="/territorio"  class="text-amber-300/80 hover:text-amber-200 transition">Proyecto Territorio</a></li>
+          <li><a routerLink="/galeria"     class="text-amber-300/80 hover:text-amber-200 transition">Galería de Fotos</a></li>
         </ul>
       </div>
-
-      <!-- Col 3: Contacts -->
-      <div class="space-y-4">
-        <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider">Contactos Municipales</h4>
-        <ul class="space-y-2 text-xs text-slate-400 leading-relaxed">
-          <li>🏢 Alcaldía Municipal de La Virginia</li>
+      <div>
+        <h4 class="font-heading text-sm font-bold text-amber-200 uppercase tracking-wider mb-3">Contacto Municipal</h4>
+        <ul class="space-y-1.5 text-xs font-sans text-amber-300/70 leading-relaxed">
+          <li>🏢 Alcaldía de La Virginia</li>
           <li>📍 Cra. 8 #6-21, La Virginia, Risaralda</li>
-          <li>📞 Teléfono: (+57) 6 340 0300</li>
-          <li>✉️ Correo: contacto&#64;lavirginia-risaralda.gov.co</li>
+          <li>📞 (+57) 6 340 0300</li>
+          <li>✉️ contacto&#64;lavirginia-risaralda.gov.co</li>
         </ul>
       </div>
-
-      <!-- Col 4: Regional Links -->
-      <div class="space-y-4">
-        <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider">Enlaces de Interés</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a href="https://www.risaralda.gov.co" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition">Gobernación de Risaralda</a></li>
-          <li><a href="https://www.mincit.gov.co" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition">MinComercio, Industria y Turismo</a></li>
-          <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition">Videos de YouTube</a></li>
+      <div>
+        <h4 class="font-heading text-sm font-bold text-amber-200 uppercase tracking-wider mb-3">Enlaces de Interés</h4>
+        <ul class="space-y-1.5 text-xs font-sans">
+          <li><a href="https://www.risaralda.gov.co" target="_blank" rel="noopener" class="text-amber-300/80 hover:text-amber-200 transition">Gobernación de Risaralda</a></li>
+          <li><a href="https://lavirginia-risaralda.gov.co" target="_blank" rel="noopener" class="text-amber-300/80 hover:text-amber-200 transition">Alcaldía Municipal</a></li>
+          <li><a routerLink="/interactivo" class="text-amber-400 font-semibold hover:text-amber-300 transition">Jugar Trivia ✦</a></li>
         </ul>
-      </div>
-
-    </div>
-
-    <!-- Bottom Copyright -->
-    <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-      <p class="text-xs text-slate-500">
-        &copy; 2026 Portal Informativo de La Virginia, Risaralda. Diseñado en Angular y Tailwind CSS. Todos los derechos reservados.
-      </p>
-      <div class="flex gap-4 text-xs font-semibold">
-        <span class="text-slate-600">Español 🇨🇴</span>
-        <a routerLink="/interactivo" class="text-amber-500 hover:underline">Jugar Trivia</a>
       </div>
     </div>
 
+    <div class="border-t border-amber-800/50 pt-6 text-center text-xs font-sans text-amber-400/60">
+      &copy; 2026 Portal Informativo de La Virginia, Risaralda · Desarrollado en Angular &amp; Tailwind CSS
+    </div>
   </div>
 </footer>

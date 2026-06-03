@@ -191,103 +191,115 @@ export class GastronomiaComponent {
   protected dishes: Dish[] = [
     {
       id: 'viudo-pescado',
-      name: 'Viudo de Pescado en Salsa',
+      name: 'Viudo de Pescado',
       category: 'Pescados',
-      description: 'El rey de la mesa ribereña. Pescado sudado al vapor sobre lechos de yuca, plátano verde e impregnado con hogao criollo espeso.',
-      image: 'assets/images/gastronomia-viudo.jpg',
+      description: 'El rey de la mesa ribereña. Pescado cocinado en sus jugos servido con un guiso criollo, yuca y plátano verde.',
+      image: 'assets/gastronomia/viudo_de_pescado_.jpg',
       ingredients: [
-        '1 Bocachico grande o Capaz fresco',
-        '2 Plátanos verdes cortados en troncos',
-        '1 Libra de yuca pelada',
-        '3 Arracachas medianas',
-        'Para el hogao: Cebolla larga, tomates maduros, ajo, achiote, cilantro y comino'
+        'Pescado fresco del Río Cauca',
+        'Yuca y plátano verde',
+        'Hogao casero tradicional',
+        'Especias locales'
       ],
       prepTime: '45 mins',
       difficulty: 'Medio',
-      secretTip: 'Envuelve el pescado en hojas de plátano soasadas durante la cocción al vapor para retener sus jugos y aportar un aroma campestre inigualable.'
+      secretTip: 'Envuelve el pescado en hojas de plátano soasadas durante la cocción para retener los jugos y aportar aroma.'
     },
     {
       id: 'trucha-frita',
-      name: 'Trucha Frita del Río',
+      name: 'Trucha Frita',
       category: 'Pescados',
-      description: 'Deliciosa trucha fresca, frita hasta obtener una piel dorada y crujiente con una carne tierna y jugosa por dentro. Servida con patacón.',
+      description: 'Trucha fresca frita hasta lograr una piel dorada y crujiente, servida con generosos trozos de limón y ensalada.',
       image: 'assets/gastronomia/Trucha frita.png',
       ingredients: [
-        '1 Trucha fresca entera de la región',
-        'Harina de trigo para apanar',
-        'Sal, ajo macerado y pimienta al gusto',
-        'Aceite vegetal para freír',
-        'Acompañamiento: Limón mandarina, patacón verde y arroz con coco'
+        'Trucha fresca entera',
+        'Ajo macerado y sal',
+        'Aceite caliente para freír',
+        'Limón fresco'
       ],
       prepTime: '25 mins',
       difficulty: 'Fácil',
-      secretTip: 'Sazona la trucha con ajo molido y unas gotas de limón 15 minutos antes de freír para que absorba bien el sabor en su carne blanca.'
+      secretTip: 'Marina la trucha con el ajo molido y unas gotas de limón 15 minutos antes de freír.'
     },
     {
       id: 'patacon-relleno',
-      name: 'Patacón Relleno Especial',
+      name: 'Patacón Relleno',
       category: 'Aperitivos',
-      description: 'Un patacón de plátano verde gigante y crujiente en forma de canasta, relleno de carne desmechada, pechuga de pollo, hogao criollo y queso derretido.',
+      description: 'Patacón de plátano verde crujiente, coronado con una abundante mezcla de carnes desmechadas y salsas.',
       image: 'assets/gastronomia/Patacon Relleno.jpeg',
       ingredients: [
-        '1 Plátano verde grande (Hartón)',
-        'Carne de res desmechada y pechuga de pollo desmechada',
-        'Guiso de cebolla, tomate picado y ajo',
-        'Queso doble crema rallado para gratinar',
-        'Aceite para freír y sal al gusto'
+        'Plátano verde Hartón',
+        'Carne desmechada mixta',
+        'Hogao criollo',
+        'Queso para gratinar'
       ],
       prepTime: '30 mins',
       difficulty: 'Fácil',
-      secretTip: 'Fríe el plátano en trozos gruesos a fuego medio, sácalo, aplástalo usando dos tablas de madera y vuelve a freírlo a fuego alto para que quede extra crujiente.'
+      secretTip: 'Pasa el plátano por agua con ajo antes de la segunda fritura para un extra de sabor y crocancia.'
     },
     {
       id: 'pizza-artesanal',
       name: 'Pizza Artesanal Italiana',
       category: 'Otros',
-      description: 'Pizza de masa delgada horneada artesanalmente con salsa casera de tomates maduros, abundante queso mozzarella fundido, albahaca y aceite de oliva.',
+      description: 'Exquisita pizza horneada con una auténtica masa madre de larga fermentación y SIN levadura comercial. Fresca y ligera.',
       image: 'assets/gastronomia/Pizza Artesanal Italiana.jpeg',
       ingredients: [
-        'Harina de trigo de fuerza y levadura para la masa',
-        'Salsa de tomates frescos sazonada con orégano y sal de mar',
-        'Queso mozzarella de búfala rallado',
-        'Hojas de albahaca fresca',
-        'Aceite de oliva extra virgen'
+        'Masa madre artesanal (sin levadura)',
+        'Salsa de tomates naturales sazonada',
+        'Queso mozzarella premium',
+        'Albahaca fresca y aceite de oliva'
       ],
-      prepTime: '20 mins',
-      difficulty: 'Medio',
-      secretTip: 'Para emular un horno de leña profesional, precalienta una piedra para pizza o una bandeja metálica a la máxima temperatura antes de deslizar la masa.'
+      prepTime: '24 hrs',
+      difficulty: 'Difícil',
+      secretTip: 'El secreto está en el tiempo: una masa madre de lenta fermentación hace que la pizza sea crujiente, ligera y muy fácil de digerir.'
     },
     {
-      id: 'chontaduro',
-      name: 'Chontaduros con Miel y Sal',
-      category: 'Aperitivos',
-      description: 'Fruto exótico de palmera muy popular en las calles soleadas de La Virginia. Se consume caliente y aderezado con sal y miel de abejas.',
-      image: 'assets/images/gastronomia-chontaduro.jpg',
+      id: 'avena-palomino',
+      name: 'Avena Palomino',
+      category: 'Bebidas y Postres',
+      description: 'Bebida tradicional fría, espesa y dulce a base de avena y canela, ideal para acompañar fritos locales.',
+      image: 'assets/gastronomia/avena_palomino.jpg',
       ingredients: [
-        'Chontaduros maduros cocidos',
-        'Miel de abejas pura',
-        'Sal al gusto',
-        'Limón fresco (opcional)'
+        'Avena en hojuelas cocida',
+        'Leche entera y leche condensada',
+        'Astillas de canela y clavos',
+        'Hielo'
+      ],
+      prepTime: '15 mins',
+      difficulty: 'Fácil',
+      secretTip: 'Deja reposar la mezcla de avena con canela toda la noche en la nevera antes de licuar.'
+    },
+    {
+      id: 'empanada-12',
+      name: 'Empanada de la 12',
+      category: 'Aperitivos',
+      description: 'Las famosas empanadas crocantes de maíz amarillo, un clásico indiscutible del pueblo servido con ají casero.',
+      image: 'assets/gastronomia/empanada_de_la_12.jpg',
+      ingredients: [
+        'Masa de maíz amarillo',
+        'Guiso de papa y carne molida',
+        'Cebolla larga finamente picada',
+        'Aceite para freír'
+      ],
+      prepTime: '40 mins',
+      difficulty: 'Medio',
+      secretTip: 'El ají es fundamental: prepáralo con cilantro cimarrón fresco, ají dulce y un toque de limón mandarina.'
+    },
+    {
+      id: 'ensalada-frutas',
+      name: 'Ensalada de Frutas',
+      category: 'Bebidas y Postres',
+      description: 'Copón rebosante de frutas tropicales frescas picadas, bañadas en crema, helado y queso rallado.',
+      image: 'assets/gastronomia/ensalada-de-frutas.webp',
+      ingredients: [
+        'Papaya, banano, manzana y sandía',
+        'Crema de leche dulce',
+        'Queso costeño rallado',
+        'Helado de vainilla'
       ],
       prepTime: '10 mins',
       difficulty: 'Fácil',
-      secretTip: 'Cocina los chontaduros con una pizca de sal y una hoja de higuerón en el agua para suavizar la pulpa de forma natural.'
-    },
-    {
-      id: 'raspado',
-      name: 'Raspado y Salpicón del Río',
-      category: 'Bebidas y Postres',
-      description: 'Postre refrescante para aplacar el calor tropical. Hielo raspado a mano bañado en jarabes dulces de frutas con leche condensada.',
-      image: 'assets/images/gastronomia-raspado.jpg',
-      ingredients: [
-        'Hielo finamente triturado',
-        'Jarabes de frutas caseros (kola, maracuyá, limón)',
-        'Leche condensada espesa',
-        'Ensalada de frutas picadas (piña, papaya, sandía, banano) para el salpicón'
-      ],
-      prepTime: '5 mins',
-      difficulty: 'Fácil',
-      secretTip: 'Combina el raspado de kola clásica con salpicón de frutas natural encima para crear el famoso "Cholado del Puerto", una explosión refrescante.'
+      secretTip: 'El contraste de lo dulce del helado con el toque sutilmente salado del queso rallado es lo que la hace irresistible.'
     }
   ];
 
